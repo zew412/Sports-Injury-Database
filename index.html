@@ -1420,12 +1420,33 @@ function toggleArch() {
   document.getElementById('arch-panel').classList.toggle('open');
 }
 
-// ─── API CONFIG ───────────────────────────────────────────────────────────────
-// 🔑 Paste your TweetAPI key here:
-const TWEET_API_KEY = 'sk_92c46f3814a88888c14a2121f216f94a7519b08e';
-const API_BASE = 'https://api.tweetapi.com';
+// ─── DEMO REPORTS ─────────────────────────────────────────────────────────────
+const DEMO_REPORTS = [
+  {player:"Jayson Tatum",team:"Boston Celtics",injury:"Ankle sprain",body:"ankle",status:"Questionable",confidence:0.88,reporter:"Jay King",handle:"@ByJayKing",outlet:"The Athletic",tier:1,tweet:"Jayson Tatum went through a limited shootaround this morning. Listed as Questionable tonight with that left ankle. Worth monitoring — he was noticeably favoring it during team drills.",minsAgo:14,corroborators:["Chris Forsberg","Gary Washburn"]},
+  {player:"Giannis Antetokounmpo",team:"Milwaukee Bucks",injury:"Knee soreness",body:"knee",status:"Out",confidence:0.97,reporter:"Eric Nehm",handle:"@eric_nehm",outlet:"The Athletic",tier:1,tweet:"Giannis is OUT tonight. Knee soreness. He did not participate in shootaround and was seen in the training room before the team session. Bucks not taking any risks with 4 games in 6 days.",minsAgo:22,corroborators:["Matt Velazquez"]},
+  {player:"Karl-Anthony Towns",team:"New York Knicks",injury:"Right ankle",body:"ankle",status:"Game-Time Decision",confidence:0.81,reporter:"Ian Begley",handle:"@IanBegley",outlet:"SNY",tier:1,tweet:"KAT is a game-time decision tonight. The Knicks are being cautious with the right ankle. He went through individual work but was limited in team drills. Decision expected at warmups.",minsAgo:38,corroborators:[]},
+  {player:"Bam Adebayo",team:"Miami Heat",injury:"Back tightness",body:"back",status:"Probable",confidence:0.91,reporter:"Ira Winderman",handle:"@IraHeatBeat",outlet:"Sun Sentinel",tier:1,tweet:"Bam is probable tonight despite back tightness. He went through full practice. Expect him to play barring any last-minute setback in warmups.",minsAgo:45,corroborators:["Anthony Chiang"]},
+  {player:"Joel Embiid",team:"Philadelphia 76ers",injury:"Knee — load management",body:"knee",status:"Out",confidence:0.99,reporter:"Keith Pompey",handle:"@PompeyOnSixers",outlet:"Philadelphia Inquirer",tier:1,tweet:"Joel Embiid will not play tonight. Load management on the scheduled back-to-back. No injury concern beyond the planned rest. He is expected to play Friday.",minsAgo:55,corroborators:["Kyle Neubeck","Rich Hofmann"]},
+  {player:"Luka Doncic",team:"Dallas Mavericks",injury:"Calf tightness",body:"calf",status:"Questionable",confidence:0.85,reporter:"Tim MacMahon",handle:"@espn_macmahon",outlet:"ESPN",tier:1,tweet:"Luka Doncic is questionable tonight with left calf tightness. He was limited at shootaround. This is an injury the Mavs have been managing carefully over the last two weeks.",minsAgo:62,corroborators:["Callie Caplan"]},
+  {player:"Victor Wembanyama",team:"San Antonio Spurs",injury:"Hip flexor",body:"hip",status:"Out",confidence:0.96,reporter:"Jeff McDonald",handle:"@JMcDonald_SAEN",outlet:"San Antonio Express-News",tier:1,tweet:"Wemby is out tonight. Hip flexor. He warmed up separately from the team and was ruled out about 90 minutes before tip. Spurs being very careful with him.",minsAgo:71,corroborators:[]},
+  {player:"Nikola Jokic",team:"Denver Nuggets",injury:"Wrist (precautionary)",body:"wrist",status:"Probable",confidence:0.93,reporter:"Mike Singer",handle:"@msinger",outlet:"Denver Post",tier:1,tweet:"Jokic is probable. Wrist listed as precautionary. He was full go in practice. No real concern here — expect him to play.",minsAgo:89,corroborators:["Bennett Durando"]},
+  {player:"Tyrese Haliburton",team:"Indiana Pacers",injury:"Hamstring tightness",body:"hamstring",status:"Doubtful",confidence:0.79,reporter:"Dustin Dopirak",handle:"@DustinDopirak",outlet:"The Athletic",tier:1,tweet:"Haliburton is doubtful tonight. Hamstring tightness. He was seen in the training room before shootaround and did not participate. This one feels like a no-go barring a last-minute turnaround.",minsAgo:97,corroborators:[]},
+  {player:"Stephen Curry",team:"Golden State Warriors",injury:"Shoulder soreness",body:"shoulder",status:"Questionable",confidence:0.82,reporter:"Anthony Slater",handle:"@anthonyVslater",outlet:"ESPN",tier:1,tweet:"Curry is Q tonight. The shoulder has been bothering him since the Memphis game. He went through limited work at shootaround — trainers monitoring closely through warmups.",minsAgo:110,corroborators:["Marcus Thompson"]},
+  {player:"Damian Lillard",team:"Milwaukee Bucks",injury:"Achilles (maintenance)",body:"ankle",status:"Probable",confidence:0.88,reporter:"Eric Nehm",handle:"@eric_nehm",outlet:"The Athletic",tier:1,tweet:"Dame listed as probable with the Achilles maintenance tag. This is routine management. He went through a full practice, no restriction.",minsAgo:118,corroborators:[]},
+  {player:"LeBron James",team:"Los Angeles Lakers",injury:"Foot soreness",body:"foot",status:"Questionable",confidence:0.76,reporter:"Shams Charania",handle:"@ShamsCharania",outlet:"ESPN",tier:1,tweet:"LeBron James is questionable tonight vs Oklahoma City with left foot soreness. He went through a limited shootaround. Decision expected closer to tip.",minsAgo:130,corroborators:["Dave McMenamin","Mike Trudell"]},
+  {player:"Donovan Mitchell",team:"Cleveland Cavaliers",injury:"Knee soreness",body:"knee",status:"Out",confidence:0.95,reporter:"Chris Fedor",handle:"@ChrisFedor",outlet:"Cleveland Plain Dealer",tier:1,tweet:"Donovan Mitchell will not play tonight. Knee soreness. He did not practice yesterday and was ruled out this morning. The Cavs are being cautious with 6 games in 9 days.",minsAgo:142,corroborators:["Joe Vardon"]},
+  {player:"Shai Gilgeous-Alexander",team:"Oklahoma City Thunder",injury:"Ankle (precautionary)",body:"ankle",status:"Probable",confidence:0.94,reporter:"Brandon Rahbar",handle:"@BrandonRahbar",outlet:"Daily Thunder",tier:1,tweet:"SGA is probable tonight. The ankle tag is precautionary. He was fully active in practice and the Thunder have no real concern heading into tonight's game.",minsAgo:155,corroborators:["Joel Lorenzi"]},
+  {player:"Pascal Siakam",team:"Indiana Pacers",injury:"Groin tightness",body:"groin",status:"Game-Time Decision",confidence:0.77,reporter:"Dustin Dopirak",handle:"@DustinDopirak",outlet:"The Athletic",tier:1,tweet:"Siakam is a game-time decision with groin tightness. He went through individual work but sat out team drills. Pacers expect to know more by warmups.",minsAgo:167,corroborators:[]},
+  {player:"Anthony Davis",team:"Los Angeles Lakers",injury:"Lower back",body:"back",status:"Out",confidence:0.98,reporter:"Dave McMenamin",handle:"@mcten",outlet:"ESPN",tier:1,tweet:"Anthony Davis will not play tonight due to lower back soreness. He was ruled out this afternoon. No structural concern, but the Lakers are prioritizing caution with their upcoming schedule.",minsAgo:175,corroborators:["Mike Trudell","Ohm Youngmisuk"]},
+];
 
-// How often to poll each reporter's tweets (ms). 300000 = 5 minutes.
+// ─── API CONFIG ───────────────────────────────────────────────────────────────
+const API_URL = '';       // Set to your Railway proxy URL e.g. 'https://injurywire-proxy-production.up.railway.app'
+const API_KEY = '';       // Not used client-side — key lives in Railway env vars
+const POLL_MS = 60000;
+
+// TweetAPI base kept for reference only — all calls go through the proxy
+const TWEET_API_BASE = 'https://api.tweetapi.com';
 const POLL_INTERVAL_MS = 300000;
 
 // ─── INJURY DETECTION ────────────────────────────────────────────────────────
@@ -1515,25 +1536,40 @@ let currentConf = 'all';
 let currentSort = 'time';
 let searchQuery = '';
 let newIds = new Set();
+const newExpiry = {};  // reportId → expiry timestamp for countdown
 
-// Cache: handle → { userId, avatar, followerCount, lastFetched }
+// TweetAPI state
 let reporterProfiles = {};
-// Seen tweet IDs to avoid duplicate cards
 let seenTweetIds = new Set();
-// Reporter handle → userId map (populated after profile fetch)
 let handleToUserId = {};
 
 const ALL_TEAMS = ["Atlanta Hawks","Boston Celtics","Brooklyn Nets","Charlotte Hornets","Chicago Bulls","Cleveland Cavaliers","Dallas Mavericks","Denver Nuggets","Detroit Pistons","Golden State Warriors","Houston Rockets","Indiana Pacers","LA Clippers","Los Angeles Lakers","Memphis Grizzlies","Miami Heat","Milwaukee Bucks","Minnesota Timberwolves","New Orleans Pelicans","New York Knicks","Oklahoma City Thunder","Orlando Magic","Philadelphia 76ers","Phoenix Suns","Portland Trail Blazers","Sacramento Kings","San Antonio Spurs","Toronto Raptors","Utah Jazz","Washington Wizards"];
 
-// ─── API HELPERS ──────────────────────────────────────────────────────────────
-async function apiGet(path, params = {}) {
-  const url = new URL(`${API_BASE}${path}`);
-  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
-  const res = await fetch(url.toString(), {
-    headers: { 'X-API-Key': TWEET_API_KEY }
+// ─── PROXY HELPERS ────────────────────────────────────────────────────────────
+// All TweetAPI calls go through the Railway proxy — key never touches the client.
+async function proxyGet(endpoint, params = {}) {
+  const proxyBase = API_URL || 'http://localhost:3000';
+  const url = new URL(`${proxyBase}${endpoint}`);
+  Object.entries(params).forEach(([k, v]) => {
+    if (v !== undefined && v !== null && v !== '') url.searchParams.set(k, v);
   });
-  if (!res.ok) throw new Error(`API error ${res.status}: ${path}`);
+  const res = await fetch(url.toString());
+  if (!res.ok) throw new Error(`Proxy error ${res.status}: ${endpoint}`);
   return res.json();
+}
+
+// Compatibility alias so all existing callers (fetchReporterProfiles, fetchViaSearch, etc.)
+// route through the proxy transparently.
+async function apiGet(path, params = {}) {
+  // Map TweetAPI paths → proxy routes
+  const routeMap = {
+    '/tw-v2/user/by-usernames': '/proxy/users',
+    '/tw-v2/search':            '/proxy/search',
+    '/tw-v2/user/tweets':       '/proxy/tweets',
+  };
+  const proxyRoute = routeMap[path];
+  if (!proxyRoute) throw new Error(`Unknown TweetAPI path: ${path}`);
+  return proxyGet(proxyRoute, params);
 }
 
 // ─── STEP 1: Fetch all reporter profiles (up to 200 at a time) ───────────────
@@ -1623,7 +1659,8 @@ function processTweet(tweet, reporter) {
 
   allReports.unshift(newReport);
   newIds.add(newReport.id);
-  setTimeout(() => { newIds.delete(newReport.id); renderFeed(); }, 300000);
+  newExpiry[newReport.id] = Date.now() + 300000;
+  setTimeout(() => { newIds.delete(newReport.id); delete newExpiry[newReport.id]; renderFeed(); }, 300000);
 }
 
 // ─── STEP 2A: Search-based approach (most efficient — 1 API call covers all reporters) ──
@@ -1706,62 +1743,31 @@ function updateStatusBar(msg) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
-async function init() {
-  const hasKey = TWEET_API_KEY && TWEET_API_KEY !== 'YOUR_API_KEY_HERE';
-
-  if (!hasKey) {
-    showApiSetupBanner();
-    loadDemoData();
-    return;
+function init() {
+  loadData();
+  setInterval(updateTimestamps, 1000);  // 1s for countdown accuracy
+  // Auto-poll when backend API is configured
+  if (API_URL && API_KEY) {
+    setInterval(() => loadData(true), POLL_MS);
   }
-
-  document.getElementById('feed-count').textContent = 'Connecting to TweetAPI...';
-
-  try {
-    // Phase 1: resolve all 213 usernames → user IDs (2 batches of 200/13)
-    await fetchReporterProfiles();
-    const resolved = Object.keys(reporterProfiles).length;
-    document.getElementById('feed-count').textContent = `${resolved}/213 reporters resolved — scanning for injuries...`;
-
-    // Phase 2: search + per-reporter sweep
-    await pollAllReporters();
-
-    // Phase 3: recurring poll every 5 minutes
-    setInterval(pollAllReporters, POLL_INTERVAL_MS);
-
-  } catch (e) {
-    console.error('Init failed:', e);
-    showApiError(e.message);
-    loadDemoData();
-  }
-
-  setTimeout(() => {
-    document.getElementById('skeleton').style.display = 'none';
-    buildTeamList();
-    buildReporterSidebar();
-    buildTicker();
-    applyFilters();
-  }, 1500);
-
-  setInterval(updateTimestamps, 60000);
 }
 
-function loadDemoData() {
-  const DEMO = [
-    {player:"Jayson Tatum",team:"Boston Celtics",injury:"Ankle sprain",body:"ankle",status:"Questionable",confidence:0.88,reporter:"Jay King",handle:"@ByJayKing",outlet:"The Athletic",tier:1,tweet:"Jayson Tatum went through a limited shootaround this morning. Listed as Questionable tonight with that left ankle. Worth monitoring — he was noticeably favoring it during team drills.",minsAgo:14,corroborators:["Chris Forsberg","Gary Washburn"]},
-    {player:"Giannis Antetokounmpo",team:"Milwaukee Bucks",injury:"Knee soreness",body:"knee",status:"Out",confidence:0.97,reporter:"Eric Nehm",handle:"@eric_nehm",outlet:"The Athletic",tier:1,tweet:"Giannis is OUT tonight. Knee soreness. He did not participate in shootaround and was seen in the training room before the team session.",minsAgo:22,corroborators:["Matt Velazquez"]},
-    {player:"Karl-Anthony Towns",team:"New York Knicks",injury:"Right ankle",body:"ankle",status:"Game-Time Decision",confidence:0.81,reporter:"Ian Begley",handle:"@IanBegley",outlet:"SNY",tier:1,tweet:"KAT is a game-time decision tonight. The Knicks are being cautious with the right ankle. Decision expected at warmups.",minsAgo:38,corroborators:[]},
-    {player:"Joel Embiid",team:"Philadelphia 76ers",injury:"Knee — load management",body:"knee",status:"Out",confidence:0.99,reporter:"Keith Pompey",handle:"@PompeyOnSixers",outlet:"Philadelphia Inquirer",tier:1,tweet:"Joel Embiid will not play tonight. Load management on the scheduled back-to-back. He is expected to play Friday.",minsAgo:55,corroborators:["Kyle Neubeck","Rich Hofmann"]},
-    {player:"Luka Doncic",team:"Dallas Mavericks",injury:"Calf tightness",body:"calf",status:"Questionable",confidence:0.85,reporter:"Tim MacMahon",handle:"@espn_macmahon",outlet:"ESPN",tier:1,tweet:"Luka Doncic is questionable tonight with left calf tightness. He was limited at shootaround.",minsAgo:62,corroborators:["Callie Caplan"]},
-    {player:"LeBron James",team:"Los Angeles Lakers",injury:"Foot soreness",body:"foot",status:"Questionable",confidence:0.76,reporter:"Shams Charania",handle:"@ShamsCharania",outlet:"ESPN",tier:1,tweet:"LeBron James is questionable tonight with left foot soreness. Decision expected closer to tip.",minsAgo:130,corroborators:["Dave McMenamin","Mike Trudell"]},
-    {player:"Donovan Mitchell",team:"Cleveland Cavaliers",injury:"Knee soreness",body:"knee",status:"Out",confidence:0.95,reporter:"Chris Fedor",handle:"@ChrisFedor",outlet:"Cleveland Plain Dealer",tier:1,tweet:"Donovan Mitchell will not play tonight. Knee soreness. The Cavs are being cautious with 6 games in 9 days.",minsAgo:142,corroborators:["Joe Vardon"]},
-    {player:"Anthony Davis",team:"Los Angeles Lakers",injury:"Lower back",body:"back",status:"Out",confidence:0.98,reporter:"Dave McMenamin",handle:"@mcten",outlet:"ESPN",tier:1,tweet:"Anthony Davis will not play tonight due to lower back soreness. No structural concern, but the Lakers are prioritizing caution.",minsAgo:175,corroborators:["Mike Trudell","Ohm Youngmisuk"]},
-  ];
-  allReports = DEMO.map((r, i) => ({
+// ─── DATA LOADING ─────────────────────────────────────────────────────────────
+async function loadData(silent = false) {
+  if (API_URL && API_KEY) {
+    await loadFromAPI(silent);
+  } else {
+    loadMockData();
+  }
+}
+
+function loadMockData() {
+  allReports = DEMO_REPORTS.map((r, i) => ({
     ...r, id: i,
     timestamp: new Date(Date.now() - r.minsAgo * 60000),
     leadTime: Math.floor(Math.random() * 160 + 20)
   }));
+  setApiStatus('demo', 'DEMO');
   setTimeout(() => {
     document.getElementById('skeleton').style.display = 'none';
     buildTeamList();
@@ -1769,34 +1775,72 @@ function loadDemoData() {
     buildTicker();
     applyFilters();
   }, 1200);
+  // Inject live demo pushes to demonstrate real-time updates
+  setTimeout(() => pushNewReport({player:"Anthony Edwards",team:"Minnesota Timberwolves",injury:"Knee soreness",body:"knee",status:"Questionable",confidence:0.83,reporter:"Jon Krawczynski",handle:"@JonKrawczynski",outlet:"The Athletic",tier:1,tweet:"Ant is questionable tonight. Knee soreness. He was limited at shootaround — going through his usual pregame treatment. I'd call this about 50-50 right now.",corroborators:[]}), 9000);
+  setTimeout(() => pushNewReport({player:"Zion Williamson",team:"New Orleans Pelicans",injury:"Hamstring",body:"hamstring",status:"Out",confidence:0.98,reporter:"Will Guillory",handle:"@WillGuillory",outlet:"The Athletic",tier:1,tweet:"Zion Williamson is out tonight. Hamstring. He did not travel with the team and was ruled out this morning. No timeline for return provided by the Pelicans.",corroborators:["Jim Eichenhofer"]}), 24000);
 }
 
-function showApiSetupBanner() {
-  const feed = document.getElementById('feed');
-  feed.innerHTML = `
-    <div style="padding:32px 24px;border-bottom:1px solid var(--border);background:rgba(0,200,255,0.03);">
-      <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:3px;color:var(--accent);margin-bottom:10px">API SETUP REQUIRED</div>
-      <div style="font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:2px;color:var(--text);margin-bottom:8px">ADD YOUR TWEETAPI KEY</div>
-      <div style="font-family:var(--font-mono);font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:16px">
-        Open this file and replace <span style="color:var(--accent);background:rgba(0,200,255,0.1);padding:1px 6px;border-radius:3px">YOUR_API_KEY_HERE</span> at the top of the script with your key from
-        <a href="https://www.tweetapi.com" target="_blank" style="color:var(--accent)">tweetapi.com</a>.<br><br>
-        The app will then monitor all <strong style="color:var(--text)">213 beat reporters</strong> in real time and automatically surface injury tweets.
-      </div>
-      <div style="font-family:var(--font-mono);font-size:10px;color:var(--text2);background:var(--surface2);border:1px solid var(--border2);border-radius:6px;padding:12px 14px;line-height:1.8">
-        <span style="color:var(--muted)">// Line ~1 of the &lt;script&gt; block:</span><br>
-        <span style="color:var(--accent)">const TWEET_API_KEY</span> = <span style="color:var(--green)">'YOUR_API_KEY_HERE'</span>;
-      </div>
-      <div style="margin-top:12px;font-family:var(--font-mono);font-size:10px;color:var(--muted)">
-        Showing demo data below ↓
-      </div>
-    </div>`;
+async function loadFromAPI(silent = false) {
+  if (!silent) setApiStatus('loading', 'CONNECTING');
+  try {
+    const res = await fetch(`${API_URL}/v1/injuries/live`, {
+      headers: { 'X-Api-Key': API_KEY, 'Content-Type': 'application/json' }
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const mapped = (data.injuries || []).map((r, i) => mapApiReport(r, i));
+    if (mapped.length) {
+      const existingIds = new Set(allReports.map(r => r.source_id));
+      mapped.forEach(r => {
+        if (r.source_id && !existingIds.has(r.source_id)) {
+          newIds.add(r.id);
+          newExpiry[r.id] = Date.now() + 300000;
+          setTimeout(() => { newIds.delete(r.id); delete newExpiry[r.id]; renderFeed(); }, 300000);
+        }
+      });
+      allReports = mapped;
+    }
+    setApiStatus('live', 'LIVE');
+    document.getElementById('last-update').textContent = 'just now';
+    document.getElementById('skeleton').style.display = 'none';
+    buildTeamList();
+    buildReporterSidebar();
+    buildTicker();
+    applyFilters();
+  } catch (err) {
+    console.error('API error:', err);
+    setApiStatus('error', 'API ERROR');
+    if (allReports.length === 0) loadMockData();
+  }
 }
 
-function showApiError(msg) {
-  const banner = document.createElement('div');
-  banner.style.cssText = 'padding:12px 24px;background:rgba(255,61,90,0.06);border-bottom:1px solid rgba(255,61,90,0.2);font-family:var(--font-mono);font-size:10px;color:#ff8fa3;';
-  banner.innerHTML = `⚠ API error: ${msg} — showing demo data`;
-  document.getElementById('feed-area').prepend(banner);
+function mapApiReport(r, i) {
+  return {
+    id: i,
+    source_id: r.id || null,
+    player: r.player_name || r.player || 'Unknown',
+    team: r.team || 'Unknown',
+    injury: r.injury_description || r.injury || 'Injury',
+    body: r.body_part || r.body || '',
+    status: r.game_status || r.status || 'Questionable',
+    confidence: (r.confidence_score || r.confidence || 75) / 100,
+    reporter: r.reporter_name || r.reporter || '',
+    handle: r.reporter_handle || r.handle || '',
+    outlet: r.outlet || '',
+    tier: r.reporter_tier || r.tier || 2,
+    tweet: r.tweet_text || r.tweet || '',
+    timestamp: new Date(r.event_time || r.timestamp || Date.now()),
+    leadTime: r.lead_time_minutes || Math.floor(Math.random() * 120 + 15),
+    corroborators: r.corroborators || [],
+  };
+}
+
+function setApiStatus(state, text) {
+  const colors = { live: 'var(--green)', loading: 'var(--accent)', error: 'var(--orange)', demo: 'var(--muted)' };
+  const dot = document.querySelector('#api-status .api-status-dot');
+  const label = document.getElementById('api-status-text');
+  if (dot) dot.style.background = colors[state] || 'var(--muted)';
+  if (label) label.textContent = text;
 }
 
 // ─── TICKER ───────────────────────────────────────────────────────────────────
@@ -2244,7 +2288,8 @@ function pushNewReport(t) {
   const newReport = { ...t, id: allReports.length, timestamp: new Date(), leadTime: Math.floor(Math.random() * 100 + 15) };
   allReports.unshift(newReport);
   newIds.add(newReport.id);
-  setTimeout(() => { newIds.delete(newReport.id); renderFeed(); }, 300000);
+  newExpiry[newReport.id] = Date.now() + 300000;
+  setTimeout(() => { newIds.delete(newReport.id); delete newExpiry[newReport.id]; renderFeed(); }, 300000);
   buildTicker();
   applyFilters();
   document.getElementById('last-update').textContent = 'just now';
