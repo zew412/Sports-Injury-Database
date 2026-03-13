@@ -1576,7 +1576,7 @@ header {
 
 <script>
 // ─── REPORTER DATABASE (from CSV) ─────────────────────────────────────────────
-const REPORTERS = [{"name":"Kevin Chouinard","handle":"@KLChouinard","outlet":"Hawks.com / Zone Coverage","team":"Atlanta Hawks","tier":1,"signal":"High","followers":"28K","conf":"E","notes":"Primary beat; fastest on Hawks injury news; daily practice access"},{"name":"Lauren L. Williams","handle":"@williamslaurenl","outlet":"Atlanta Journal-Constitution","team":"Atlanta Hawks","tier":1,"signal":"High","followers":"22K","conf":"E","notes":"AJC beat; strong locker-room sourcing"},{"name":"Sarah K. Spencer","handle":"@sarah_k_spencer","outlet":"Atlanta Journal-Constitution","team":"Atlanta Hawks","tier":2,"signal":"Medium","followers":"18K","conf":"E","notes":"AJC co-beat; detailed practice notes"},{"name":"Chris Kirschner","handle":"@ChrisKirschner","outlet":"The Athletic","team":"Atlanta Hawks","tier":2,"signal":"High","followers":"58K","conf":"E","notes":"Covers Hawks for The Athletic; breaks news regularly"},{"name":"Quenton Albertie","handle":"@QuentonAlbertie","outlet":"Last Word On Sports","team":"Atlanta Hawks","tier":3,"signal":"Medium","followers":"8K","conf":"E","notes":"Credentialed Hawks media member; covers games regularly"},{"name":"Joe Barberio","handle":"@JoeBarberio","outlet":"FanDuel Sports Network SE","team":"Atlanta Hawks","tier":3,"signal":"Medium","followers":"12K","conf":"E","notes":"Local TV sideline; locker-room access"},{"name":"Jay King","handle":"@ByJayKing","outlet":"The Athletic","team":"Boston Celtics","tier":1,"signal":"High","followers":"98K","conf":"E","notes":"Premier Celtics beat; breaks injury news very fast"},{"name":"Chris Forsberg","handle":"@ChrisForsberg_","outlet":"NBC Sports Boston","team":"Boston Celtics","tier":1,"signal":"High","followers":"80K","conf":"E","notes":"Daily practice coverage; very detailed injury reporting"},{"name":"Gary Washburn","handle":"@GaryWashburn","outlet":"Boston Globe","team":"Boston Celtics","tier":1,"signal":"High","followers":"65K","conf":"E","notes":"Veteran Globe columnist; strong team sourcing"},{"name":"Adam Himmelsbach","handle":"@adamhimmelsbach","outlet":"Boston Globe","team":"Boston Celtics","tier":1,"signal":"High","followers":"48K","conf":"E","notes":"Globe beat writer; co-covers with Washburn"},{"name":"Brian Robb","handle":"@BrianTRobb","outlet":"MassLive","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"40K","conf":"E","notes":"Daily Celtics coverage; good practice reports"},{"name":"John Karalis","handle":"@john_karalis","outlet":"WEEI / Red's Army","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"30K","conf":"E","notes":"Strong Celtics sourcing; well-connected locally"},{"name":"A. Sherrod Blakely","handle":"@SherrodBlakely","outlet":"NBC Boston","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"33K","conf":"E","notes":"Veteran Celtics voice; locker-room access"},{"name":"Tim Bontemps","handle":"@TimBontemps","outlet":"ESPN","team":"Boston Celtics","tier":2,"signal":"High","followers":"148K","conf":"E","notes":"ESPN national reporter; strong Celtics sourcing"},{"name":"Erik Slater","handle":"@erikslater_","outlet":"ClutchPoints","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Most plugged-in Nets reporter; very fast on injuries"},{"name":"Alex Schiffer","handle":"@Alex__Schiffer","outlet":"The Athletic","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"42K","conf":"E","notes":"The Athletic Nets beat; strong injury reporting"},{"name":"Brian Lewis","handle":"@NYPost_Lewis","outlet":"New York Post","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"26K","conf":"E","notes":"NY Post Nets beat; locker-room access"},{"name":"Kristian Winfield","handle":"@Krisplashed","outlet":"NY Daily News","team":"Brooklyn Nets","tier":2,"signal":"High","followers":"50K","conf":"E","notes":"Covers both NY teams; fast on injury news"},{"name":"Ryan Rudominer","handle":"@RyanRudominer","outlet":"NetsDaily / FanSided","team":"Brooklyn Nets","tier":2,"signal":"Medium","followers":"16K","conf":"E","notes":"Active Nets digital coverage; credentialed"},{"name":"Ethan Sears","handle":"@EthanJSears","outlet":"New York Post","team":"Brooklyn Nets","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"NY Post Nets contributor; regular coverage"},{"name":"Rod Boone","handle":"@rodboone","outlet":"The Athletic","team":"Charlotte Hornets","tier":1,"signal":"High","followers":"34K","conf":"E","notes":"Most connected Hornets reporter; primary beat"},{"name":"Rick Bonnell","handle":"@rick_bonnell","outlet":"Charlotte Observer","team":"Charlotte Hornets","tier":1,"signal":"High","followers":"30K","conf":"E","notes":"Decades on the Hornets beat; excellent sourcing"},{"name":"James Plowright","handle":"@british_buzz","outlet":"Locked On Hornets","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Credentialed; active daily Hornets coverage"},{"name":"Wynton McLaurin","handle":"@WyntonMcLaurin","outlet":"WCCB Charlotte","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"13K","conf":"E","notes":"Local TV; locker-room access"},{"name":"Mike Eisenberg","handle":"@MikeEisenberg_","outlet":"Hornets Beat","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"11K","conf":"E","notes":"Regular credentialed Hornets digital coverage"},{"name":"Steve Reed","handle":"@SteveReedAP","outlet":"Associated Press","team":"Charlotte Hornets","tier":2,"signal":"High","followers":"15K","conf":"E","notes":"AP Charlotte-based reporter; covers Hornets regularly"},{"name":"KC Johnson","handle":"@KCJHoop","outlet":"Chicago Sports Network","team":"Chicago Bulls","tier":1,"signal":"High","followers":"65K","conf":"E","notes":"Dean of Bulls reporters; best injury source by far"},{"name":"Julia Poe","handle":"@byjuliapoe","outlet":"Chicago Tribune","team":"Chicago Bulls","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Tribune beat; active daily practice coverage"},{"name":"Colleen Kane","handle":"@colleenkaneCT","outlet":"Chicago Tribune","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"24K","conf":"E","notes":"Tribune co-beat; covers Bulls regularly"},{"name":"Rob Schaefer","handle":"@rob_schaef","outlet":"NBC Sports Chicago","team":"Chicago Bulls","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"NBC Chicago Bulls reporter; strong locker-room access"},{"name":"Darnell Mayberry","handle":"@DarnellMayberry","outlet":"The Athletic","team":"Chicago Bulls","tier":2,"signal":"High","followers":"35K","conf":"E","notes":"The Athletic Bulls senior writer"},{"name":"Sam Smith","handle":"@SamSmithHoops","outlet":"Bulls.com","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"42K","conf":"E","notes":"Official team site contributor; insider access"},{"name":"Ben Pope","handle":"@BenPopeCST","outlet":"Chicago Sun-Times","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"18K","conf":"E","notes":"Sun-Times Bulls coverage"},{"name":"Chris Fedor","handle":"@ChrisFedor","outlet":"Cleveland Plain Dealer","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"55K","conf":"E","notes":"Most plugged-in Cavs reporter; best injury source"},{"name":"Joe Vardon","handle":"@joevardon","outlet":"The Athletic","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"52K","conf":"E","notes":"The Athletic Cavs beat; strong injury sourcing"},{"name":"Kelsey Russo","handle":"@kelseyyrusso","outlet":"The Athletic","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"The Athletic co-beat; daily practice notes"},{"name":"Evan Dammarell","handle":"@AmnoteEvan","outlet":"Fear The Sword","team":"Cleveland Cavaliers","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Credentialed Cavs reporter; active coverage"},{"name":"Dan Labbe","handle":"@dan_labbe","outlet":"cleveland.com","team":"Cleveland Cavaliers","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Cleveland.com active Cavs coverage"},{"name":"Camryn Justice","handle":"@camijustice","outlet":"WEWS NewsChannel 5","team":"Cleveland Cavaliers","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Local TV Cavs reporter; locker-room access"},{"name":"Omari Sankofa II","handle":"@omarisankofa","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":1,"signal":"High","followers":"35K","conf":"E","notes":"Lead Pistons reporter at the Freep"},{"name":"Coty Davis","handle":"@CotyDavis_24","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"Freep co-beat with Sankofa"},{"name":"James Edwards III","handle":"@JLEdwardsIII","outlet":"The Athletic","team":"Detroit Pistons","tier":1,"signal":"High","followers":"60K","conf":"E","notes":"The Athletic Pistons beat; strong injury intel"},{"name":"Rod Beard","handle":"@detnewsRodBeard","outlet":"Detroit News","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Detroit News veteran; Pistons beat"},{"name":"Vince Ellis","handle":"@vinceeellis","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"19K","conf":"E","notes":"Freep Pistons contributor; active coverage"},{"name":"Dana Gauruder","handle":"@DanaGauruder","outlet":"Detroit News","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Detroit News Pistons co-coverage"},{"name":"Dustin Dopirak","handle":"@DustinDopirak","outlet":"The Athletic","team":"Indiana Pacers","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Top Pacers source; The Athletic primary beat"},{"name":"Scott Agness","handle":"@ScottAgness","outlet":"FieldhouseFiles.com","team":"Indiana Pacers","tier":1,"signal":"High","followers":"30K","conf":"E","notes":"Dedicated Pacers site; strong locker-room access"},{"name":"James Boyd","handle":"@RomeovilleKid","outlet":"Indianapolis Star","team":"Indiana Pacers","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Indy Star Pacers beat"},{"name":"Tony East","handle":"@TEastNBA","outlet":"SI / Pacers Digest","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Credentialed Pacers media"},{"name":"Nate Taylor","handle":"@ByNateTaylor","outlet":"The Athletic","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"27K","conf":"E","notes":"The Athletic Pacers supplemental coverage"},{"name":"Mark Montieth","handle":"@MontieMedia","outlet":"Pacers.com","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Official team site; insider practice access"},{"name":"Ira Winderman","handle":"@IraHeatBeat","outlet":"South Florida Sun Sentinel","team":"Miami Heat","tier":1,"signal":"High","followers":"108K","conf":"E","notes":"38 seasons covering the Heat; GOAT Heat reporter; injury GOAT source"},{"name":"Anthony Chiang","handle":"@Anthony_Chiang","outlet":"Miami Herald","team":"Miami Heat","tier":1,"signal":"High","followers":"48K","conf":"E","notes":"Herald primary beat; frequent injury updates"},{"name":"Shandel Richardson","handle":"@ShandelRich","outlet":"Sun Sentinel","team":"Miami Heat","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"Sun Sentinel co-beat with Winderman"},{"name":"Brady Hawk","handle":"@BradyHawk305","outlet":"ClutchPoints","team":"Miami Heat","tier":2,"signal":"Medium","followers":"35K","conf":"E","notes":"Active daily Heat coverage; credentialed"},{"name":"Tim Reynolds","handle":"@ByTimReynolds","outlet":"Associated Press","team":"Miami Heat","tier":2,"signal":"High","followers":"40K","conf":"E","notes":"AP NBA reporter; South Florida-based; Heat coverage"},{"name":"Jason Jackson","handle":"@JacksonAndAudio","outlet":"Heat TV","team":"Miami Heat","tier":2,"signal":"Medium","followers":"38K","conf":"E","notes":"Heat TV host; strong locker-room access"},{"name":"Eric Nehm","handle":"@eric_nehm","outlet":"The Athletic","team":"Milwaukee Bucks","tier":1,"signal":"High","followers":"70K","conf":"E","notes":"Premier Bucks reporter; excellent injury intel"},{"name":"Matt Velazquez","handle":"@Matt_Velazquez","outlet":"Milwaukee Journal Sentinel","team":"Milwaukee Bucks","tier":1,"signal":"High","followers":"35K","conf":"E","notes":"Journal Sentinel primary Bucks beat"},{"name":"Jim Owczarski","handle":"@JimOwczarski","outlet":"Milwaukee Journal Sentinel","team":"Milwaukee Bucks","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"JS co-beat; strong locker-room access"},{"name":"James Bates","handle":"@JamesBates_","outlet":"Brew Hoop","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"16K","conf":"E","notes":"Credentialed Bucks digital site"},{"name":"Phoebe Arscott","handle":"@PArscott_","outlet":"Bally Sports Wisconsin","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Local TV; game-day locker-room access"},{"name":"Jaymes Langrehr","handle":"@jlangrehr","outlet":"WISN 12","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"12K","conf":"E","notes":"Local TV Bucks reporter; credentialed"},{"name":"Ian Begley","handle":"@IanBegley","outlet":"SNY","team":"New York Knicks","tier":1,"signal":"High","followers":"150K","conf":"E","notes":"Most connected Knicks reporter; fastest on injuries"},{"name":"Steve Popper","handle":"@StevePopper","outlet":"Newsday","team":"New York Knicks","tier":1,"signal":"High","followers":"44K","conf":"E","notes":"Longest-tenured Knicks beat writer"},{"name":"Kristian Winfield","handle":"@Krisplashed","outlet":"NY Daily News","team":"New York Knicks","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Strong locker-room access; fast on news"},{"name":"James Edwards III","handle":"@JLEdwardsIII","outlet":"The Athletic","team":"New York Knicks","tier":1,"signal":"High","followers":"60K","conf":"E","notes":"The Athletic Knicks primary beat"},{"name":"Fred Katz","handle":"@FredKatz","outlet":"The Athletic","team":"New York Knicks","tier":2,"signal":"High","followers":"65K","conf":"E","notes":"Now national writer but deep Knicks sourcing"},{"name":"Marc Berman","handle":"@NYPost_Berman","outlet":"New York Post","team":"New York Knicks","tier":2,"signal":"High","followers":"34K","conf":"E","notes":"NY Post veteran Knicks writer"},{"name":"Alan Hahn","handle":"@alanhahn","outlet":"MSG Network","team":"New York Knicks","tier":2,"signal":"Medium","followers":"60K","conf":"E","notes":"MSG broadcast analyst; locker-room access"},{"name":"Stefan Bondy","handle":"@SBondyNYDN","outlet":"NY Daily News","team":"New York Knicks","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Daily News Knicks co-coverage"},{"name":"Jason Beede","handle":"@therealBeede","outlet":"Orlando Sentinel","team":"Orlando Magic","tier":1,"signal":"High","followers":"27K","conf":"E","notes":"Primary Magic beat writer"},{"name":"Khobi Price","handle":"@khobi_price","outlet":"Orlando Sentinel","team":"Orlando Magic","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"Sentinel co-beat with Beede"},{"name":"Evan Dunlap","handle":"@EvanDunlap13","outlet":"ClutchPoints","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Active credentialed Magic coverage"},{"name":"Bo Churney","handle":"@BoChurney","outlet":"Locked On Magic","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"15K","conf":"E","notes":"Daily Magic credentialed reporter"},{"name":"Josh Robbins","handle":"@JoshuaBRobbins","outlet":"The Athletic","team":"Orlando Magic","tier":2,"signal":"High","followers":"40K","conf":"E","notes":"The Athletic; also covers Wizards and Magic"},{"name":"Scott Anez","handle":"@ScottAnez","outlet":"AP","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"12K","conf":"E","notes":"AP Orlando-based reporter; covers Magic"},{"name":"Keith Pompey","handle":"@PompeyOnSixers","outlet":"Philadelphia Inquirer","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"68K","conf":"E","notes":"Dean of Sixers reporters; best injury source"},{"name":"Kyle Neubeck","handle":"@KyleNeubeck","outlet":"PhillyVoice","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Primary beat; strong daily locker-room access"},{"name":"Rich Hofmann","handle":"@rich_hofmann","outlet":"The Athletic","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"45K","conf":"E","notes":"The Athletic Sixers beat; excellent injury intel"},{"name":"Gina Mizell","handle":"@GinaMizell","outlet":"Philadelphia Inquirer","team":"Philadelphia 76ers","tier":2,"signal":"High","followers":"27K","conf":"E","notes":"Inquirer co-beat; good injury coverage"},{"name":"Tony Jones","handle":"@Tjonesonthenba","outlet":"The Athletic","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"69K","conf":"E","notes":""},{"name":"Derek Bodner","handle":"@DerekBodner","outlet":"The Athletic / IndyPHL","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"32K","conf":"E","notes":"Strong Sixers sourcing; veteran local reporter"},{"name":"Jonathan Wasserman","handle":"@NBADraftWass","outlet":"Bleacher Report","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"40K","conf":"E","notes":"Strong Sixers personnel sourcing"},{"name":"Josh Lewenberg","handle":"@JLew1050","outlet":"TSN","team":"Toronto Raptors","tier":1,"signal":"High","followers":"95K","conf":"E","notes":"Premier Raptors reporter; very reliable on injuries"},{"name":"Doug Smith","handle":"@dougsmithstar","outlet":"Toronto Star","team":"Toronto Raptors","tier":1,"signal":"High","followers":"58K","conf":"E","notes":"Veteran Star Raptors beat writer"},{"name":"Michael Grange","handle":"@michaelgrange","outlet":"Sportsnet","team":"Toronto Raptors","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Sportsnet Raptors analyst and reporter"},{"name":"Eric Koreen","handle":"@ekoreen","outlet":"The Athletic","team":"Toronto Raptors","tier":2,"signal":"High","followers":"40K","conf":"E","notes":"The Athletic Raptors coverage"},{"name":"Vivek Jacob","handle":"@vivekjacob_","outlet":"Sportsnet","team":"Toronto Raptors","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Regular credentialed Raptors coverage"},{"name":"Blake Murphy","handle":"@BlakeMurphyODC","outlet":"The Athletic / Raptors Republic","team":"Toronto Raptors","tier":2,"signal":"Medium","followers":"30K","conf":"E","notes":"Strong Raptors sourcing; credentialed"},{"name":"Josh Robbins","handle":"@JoshuaBRobbins","outlet":"The Athletic","team":"Washington Wizards","tier":1,"signal":"High","followers":"40K","conf":"E","notes":"Primary Wizards source at The Athletic"},{"name":"Ava Wallace","handle":"@avarwallace","outlet":"Washington Post","team":"Washington Wizards","tier":1,"signal":"High","followers":"27K","conf":"E","notes":"Washington Post Wizards beat"},{"name":"Bijan Todd","handle":"@bijan_todd","outlet":"NBC Sports Washington","team":"Washington Wizards","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"NBC Washington Wizards reporter"},{"name":"Chase Hughes","handle":"@ChaseHughesNBC","outlet":"NBC Sports Washington","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Regular Wizards credentialed reporter"},{"name":"Kareem Copeland","handle":"@kareemcopeland","outlet":"Washington Post","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"WaPo co-beat coverage"},{"name":"Zach Selby","handle":"@ZachSelby_DC","outlet":"Wizards.com","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Official team site; insider practice access"},{"name":"Tim MacMahon","handle":"@espn_macmahon","outlet":"ESPN","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"185K","conf":"W","notes":"ESPN Mavs beat; top injury source for Dallas"},{"name":"Brad Townsend","handle":"@townbrad","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"48K","conf":"W","notes":"DMN veteran Mavs beat; decades on beat"},{"name":"Callie Caplan","handle":"@CallieCaplan","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"32K","conf":"W","notes":"DMN Mavs reporter; active injury coverage"},{"name":"Grant Afseth","handle":"@GrantAfseth","outlet":"ClutchPoints","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"Active daily Mavs coverage; credentialed"},{"name":"Mike Curtis","handle":"@MikeACurtis2","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"32K","conf":"W","notes":"DMN Mavs contributor"},{"name":"Eddie Sefko","handle":"@ESefko","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Longtime Mavs coverage veteran"},{"name":"Tim Cato","handle":"@tim_cato","outlet":"ALLCITY","team":"Dallas Mavericks","tier":2,"signal":"Medium","followers":"30K","conf":"W","notes":""},{"name":"Saad Yousuf","handle":"@SaadYousuf126","outlet":"The Athletic","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"35K","conf":"W","notes":"The Athletic Mavs beat writer"},{"name":"Bennett Durando","handle":"@BennettDurando","outlet":"Denver Post","team":"Denver Nuggets","tier":1,"signal":"High","followers":"35K","conf":"W","notes":"Denver Post primary Nuggets beat"},{"name":"Mike Singer","handle":"@msinger","outlet":"Denver Post","team":"Denver Nuggets","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Denver Post co-beat; strong injury coverage"},{"name":"Harrison Wind","handle":"@HarrisonWind","outlet":"DNVR Sports","team":"Denver Nuggets","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"DNVR Nuggets credentialed site; very active"},{"name":"Adam Mares","handle":"@adam_mares","outlet":"104.3 The Fan","team":"Denver Nuggets","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Local radio beat; daily access"},{"name":"Chris Dempsey","handle":"@chrisadempsey","outlet":"Altitude Sports","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Local TV reporter; game access"},{"name":"Katy Winge","handle":"@katywinge","outlet":"Altitude Sports TV","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"66K","conf":"W","notes":""},{"name":"Ryan Blackburn","handle":"@NBABlackburn","outlet":"Mile High Sports","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":""},{"name":"Gina De La Vega","handle":"@GinaDelaVega_","outlet":"Altitude Sports TV","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Altitude TV Nuggets sideline reporter"},{"name":"Anthony Slater","handle":"@anthonyVslater","outlet":"ESPN","team":"Golden State Warriors","tier":1,"signal":"High","followers":"195K","conf":"W","notes":"Left The Athletic for ESPN 2025; premier Warriors reporter"},{"name":"Marcus Thompson","handle":"@marcus_thompson","outlet":"The Athletic","team":"Golden State Warriors","tier":1,"signal":"High","followers":"88K","conf":"W","notes":"Veteran Warriors columnist; strong injury sourcing"},{"name":"Dalton Johnson","handle":"@DaltonJ_","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Active daily Warriors practice reports"},{"name":"Sam Gordon","handle":"@bysamgordon","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"NBC Bay Area Warriors beat reporter"},{"name":"Nick Friedell","handle":"@NickFriedell","outlet":"ESPN","team":"Golden State Warriors","tier":2,"signal":"High","followers":"48K","conf":"W","notes":"ESPN Warriors reporter; supplements Slater"},{"name":"Rusty Simmons","handle":"@Rusty_SFChron","outlet":"San Francisco Chronicle","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Chronicle Warriors coverage"},{"name":"Tim Kawkami","handle":"@timkawakami","outlet":"SF Standard","team":"Golden State Warriors","tier":1,"signal":"High","followers":"112K","conf":"W","notes":""},{"name":"Monte Poole","handle":"@montePooleNBCS","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"65K","conf":"W","notes":""},{"name":"Connor Letourneau","handle":"@Con_Chron","outlet":"San Francisco Chronicle","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"22K","conf":"W","notes":"Chronicle Dubs beat; regular practice coverage"},{"name":"Jonathan Feigen","handle":"@Jonathan_Feigen","outlet":"Houston Chronicle","team":"Houston Rockets","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Decades on the beat; sole primary Rockets reporter"},{"name":"Kelly Iko","handle":"@KellyIko","outlet":"The Athletic","team":"Houston Rockets","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"The Athletic Rockets beat; strong injury sourcing"},{"name":"Ben DuBose","handle":"@BenDuBose","outlet":"Space City Home Network","team":"Houston Rockets","tier":2,"signal":"High","followers":"28K","conf":"W","notes":"Active credentialed Rockets reporter"},{"name":"Lachard Binkley","handle":"@BinkleyHoops","outlet":"Locked On Rockets","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Credentialed Rockets digital coverage"},{"name":"Adam Spolane","handle":"@AdamSpolane","outlet":"Sports Radio 610","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"22K","conf":"W","notes":"Houston radio beat; locker-room access"},{"name":"Jackson Gatlin","handle":"@JacksonGatlin1","outlet":"Clutch City Sports","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"Credentialed Rockets coverage"},{"name":"Tomer Azarly","handle":"@TomerAzarly","outlet":"ClutchPoints","team":"LA Clippers","tier":1,"signal":"High","followers":"75K","conf":"W","notes":"Most connected Clippers reporter; very fast on injuries"},{"name":"Law Murray","handle":"@LawMurrayTheNU","outlet":"The Athletic","team":"LA Clippers","tier":1,"signal":"High","followers":"58K","conf":"W","notes":"The Athletic Clippers beat; strong locker-room presence"},{"name":"Joey Linn","handle":"@joeylinn_","outlet":"The Athletic","team":"LA Clippers","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"The Athletic co-beat; daily Clippers access"},{"name":"Mirjam Swanson","handle":"@MirjamSwanson","outlet":"LA Daily News","team":"LA Clippers","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Daily News Clippers coverage"},{"name":"Andrew Greif","handle":"@AndrewGreif","outlet":"Los Angeles Times","team":"LA Clippers","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"LA Times Clippers beat"},{"name":"Broderick Turner","handle":"@BA_Turner","outlet":"Los Angeles Times","team":"LA Clippers","tier":2,"signal":"Medium","followers":"25K","conf":"W","notes":"LA Times Clippers contributor"},{"name":"Mike Trudell","handle":"@LakersReporter","outlet":"Spectrum SportsNet","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"135K","conf":"W","notes":"Most connected Lakers reporter; fastest on injuries"},{"name":"Dan Woike","handle":"@DanWoike","outlet":"The Athletic","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Replaced Buha at The Athletic on Lakers beat, June 2025"},{"name":"Dave McMenamin","handle":"@mcten","outlet":"ESPN","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"100K","conf":"W","notes":"ESPN Lakers insider; strong injury sourcing"},{"name":"Kyle Goon","handle":"@kylegoon","outlet":"Southern California News Group","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"32K","conf":"W","notes":"SCNG Lakers active beat writer"},{"name":"Jovan Buha","handle":"@jovanbuha","outlet":"YouTube / Independent","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"80K","conf":"W","notes":"Left The Athletic; continues covering Lakers independently"},{"name":"Bill Oram","handle":"@billoram","outlet":"The Athletic","team":"Los Angeles Lakers","tier":2,"signal":"Medium","followers":"30K","conf":"W","notes":"The Athletic Lakers supplemental coverage"},{"name":"Ohm Youngmisuk","handle":"@NotoriousOHM","outlet":"ESPN","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"52K","conf":"W","notes":"ESPN LA-based NBA reporter; covers Lakers"},{"name":"Damichael Cole","handle":"@DamichaelC","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":1,"signal":"High","followers":"22K","conf":"W","notes":"Primary Grizzlies beat writer"},{"name":"Drew Hill","handle":"@DrewHill_DM","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":1,"signal":"High","followers":"17K","conf":"W","notes":"Commercial Appeal co-beat"},{"name":"Chris Herrington","handle":"@ChrisHerrington","outlet":"The Daily Memphian","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"26K","conf":"W","notes":""},{"name":"Evan Barnes","handle":"@evan_b","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"MCA Grizzlies supplemental coverage"},{"name":"Joe Mullinax","handle":"@sidelineSCOUT","outlet":"GrizznessNBA","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"16K","conf":"W","notes":"Credentialed Grizzlies digital coverage"},{"name":"Jared Ramsey","handle":"@JaredRamseyNBA","outlet":"Grind City Media","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"13K","conf":"W","notes":"Credentialed Grizzlies digital media"},{"name":"Jon Krawczynski","handle":"@JonKrawczynski","outlet":"The Athletic","team":"Minnesota Timberwolves","tier":1,"signal":"High","followers":"80K","conf":"W","notes":"Elite Wolves reporter; best NBA beat writer per many; top injury source"},{"name":"Chris Hine","handle":"@ChristopherHine","outlet":"Minneapolis Star Tribune","team":"Minnesota Timberwolves","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Star Tribune primary Wolves beat"},{"name":"Dane Moore","handle":"@DaneMooreNBA","outlet":"Dane Moore NBA Podcast","team":"Minnesota Timberwolves","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"Credentialed Wolves media; very active on injuries"},{"name":"Jace Frederick","handle":"@JaceFrederick","outlet":"Pioneer Press","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"19K","conf":"W","notes":""},{"name":"Tina Winder","handle":"@TinaWinder","outlet":"Bally Sports North","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Local TV; locker-room access"},{"name":"Michael Rand","handle":"@RandBall","outlet":"Minneapolis Star Tribune","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"27K","conf":"W","notes":"Star Tribune sports columnist; covers Wolves"},{"name":"Kelly Vogel","handle":"@KellyVogelNBA","outlet":"KSTP","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"Local TV Wolves reporter; credentialed"},{"name":"Jim Eichenhofer","handle":"@Jim_Eichenhofer","outlet":"Pelicans.com","team":"New Orleans Pelicans","tier":1,"signal":"High","followers":"34K","conf":"W","notes":"Official team site; unusually reliable; fast on injury news"},{"name":"Will Guillory","handle":"@WillGuillory","outlet":"The Athletic","team":"New Orleans Pelicans","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"The Athletic Pelicans primary beat"},{"name":"Christian Clark","handle":"@cclark_13","outlet":"New Orleans Times-Picayune","team":"New Orleans Pelicans","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Times-Picayune Pelicans beat"},{"name":"Oleh Kosel","handle":"@OlehKosel","outlet":"The Bird Writes","team":"New Orleans Pelicans","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Credentialed digital Pelicans coverage"},{"name":"Rod Walker","handle":"@RodWalkerNBA","outlet":"New Orleans Advocate","team":"New Orleans Pelicans","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Advocate Pelicans beat writer"},{"name":"Andrew Lopez","handle":"@_Andrew_Lopez","outlet":"ESPN","team":"New Orleans Pelicans","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"ESPN New Orleans-based Pelicans reporter"},{"name":"Brandon Rahbar","handle":"@BrandonRahbar","outlet":"Daily Thunder","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"Premier Thunder reporter; fastest on OKC injuries"},{"name":"Joel Lorenzi","handle":"@jxlorenzi","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"24K","conf":"W","notes":"Oklahoman primary Thunder beat writer"},{"name":"Rylan Stiles","handle":"@Rylan_Stiles","outlet":"Inside The Thunder / Locked On","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"Credentialed; hosts Locked On Thunder; strong injury intel"},{"name":"Justin Martinez","handle":"@JMartNBA","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":2,"signal":"High","followers":"18K","conf":"W","notes":"Oklahoman Thunder trending/coverage reporter"},{"name":"Joe Mussatto","handle":"@JoeMussattoSCR","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Former Thunder beat; still deep Thunder sourcing"},{"name":"Gerald Bourguet","handle":"@GeraldBourguet","outlet":"PHNX Media","team":"Phoenix Suns","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Top Suns reporter; breaks injury news first"},{"name":"Duane Rankin","handle":"@DuaneRankin","outlet":"Arizona Republic","team":"Phoenix Suns","tier":1,"signal":"High","followers":"44K","conf":"W","notes":"Arizona Republic Suns veteran"},{"name":"Kellan Olson","handle":"@kellanolson","outlet":"Arizona Republic","team":"Phoenix Suns","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Republic co-beat; active injury reporting"},{"name":"John Gambadoro","handle":"@Gambo987","outlet":"Arizona Sports 98.7","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"38K","conf":"W","notes":"Local radio; strong Suns sourcing"},{"name":"Bo Brack","handle":"@BoBrack","outlet":"PHNX Sports","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"PHNX co-beat; regular practice coverage"},{"name":"Ty Tasker","handle":"@TyTasker","outlet":"PHNX Sports","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"16K","conf":"W","notes":"PHNX Suns contributor; credentialed"},{"name":"Casey Holdahl","handle":"@CHold","outlet":"TrailBlazers.com","team":"Portland Trail Blazers","tier":1,"signal":"High","followers":"35K","conf":"W","notes":"Team site; very detailed practice notes; Tier 1 reliability"},{"name":"Jason Quick","handle":"@jwquick","outlet":"The Athletic","team":"Portland Trail Blazers","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"The Athletic Blazers beat veteran"},{"name":"Sean Highkin","handle":"@highkin","outlet":"Rose Garden Report","team":"Portland Trail Blazers","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Credentialed independent Blazers reporter"},{"name":"Aaron Fentress","handle":"@AaronJFentress","outlet":"The Oregonian","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Oregonian Blazers coverage"},{"name":"Joe Freeman","handle":"@BlazerFreeman","outlet":"The Oregonian","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":""},{"name":"Jamie Hudson","handle":"@JamieHudson_","outlet":"NBC Sports Northwest","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Local TV; locker-room access"},{"name":"Kerry Eggers","handle":"@KerryEggers","outlet":"Portland Tribune","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Portland Tribune; veteran Blazers beat"},{"name":"James Ham","handle":"@James_HamNBA","outlet":"NBC Sports California","team":"Sacramento Kings","tier":1,"signal":"High","followers":"44K","conf":"W","notes":"Most connected Kings reporter; decades on beat"},{"name":"Jason Anderson","handle":"@JandersonSacBee","outlet":"Sacramento Bee","team":"Sacramento Kings","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"Sacramento Bee Kings primary beat"},{"name":"Sean Cunningham","handle":"@seancunningham45","outlet":"ABC10 Sacramento","team":"Sacramento Kings","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Local TV; strong locker-room access"},{"name":"Frankie Cartoscelli","handle":"@FCartoscelli3","outlet":"Sactown Sports 1140","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"10K","conf":"W","notes":""},{"name":"Brenden Nunes","handle":"@BrendenNunesNBA","outlet":"Sactown Sports 1140","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"11K","conf":"W","notes":""},{"name":"Mike Richman","handle":"@MikeRichman","outlet":"Kings.com","team":"Sacramento Kings","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Official team site; good injury and practice detail"},{"name":"Mychael Urban","handle":"@MychealUrban","outlet":"NBC Sports California","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"NBC CA Kings supplemental reporter"},{"name":"Matt George","handle":"@MattGeorge975","outlet":"95.7 The Game / KHTK","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Sacramento radio; locker-room access"},{"name":"Jeff McDonald","handle":"@JMcDonald_SAEN","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Lead Spurs beat writer at Express-News"},{"name":"Tom Orsborn","handle":"@tom_orsborn","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":1,"signal":"High","followers":"30K","conf":"W","notes":"Express-News co-beat; strong practice notes"},{"name":"Paul Garcia","handle":"@PaulGarciaNBA","outlet":"Project Spurs / Locked On","team":"San Antonio Spurs","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Credentialed Spurs digital coverage"},{"name":"Mike Finger","handle":"@mikefinger","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":2,"signal":"Medium","followers":"27K","conf":"W","notes":"SAEN sports columnist; Spurs-focused"},{"name":"Jabari Young","handle":"@JabariJYoung","outlet":"CNBC / Sports Business","team":"San Antonio Spurs","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":"Former Spurs beat; still well-sourced in SA"},{"name":"Damian Arseneault","handle":"@DamianArseneault","outlet":"The Athletic","team":"San Antonio Spurs","tier":2,"signal":"High","followers":"20K","conf":"W","notes":"The Athletic Spurs coverage"},{"name":"Andy Larsen","handle":"@andyblarsen","outlet":"Salt Lake Tribune","team":"Utah Jazz","tier":1,"signal":"High","followers":"55K","conf":"W","notes":"Top Jazz reporter; stat-savvy injury coverage"},{"name":"Eric Walden","handle":"@tribjazz","outlet":"Salt Lake Tribune","team":"Utah Jazz","tier":1,"signal":"High","followers":"30K","conf":"W","notes":"Tribune co-beat with Larsen"},{"name":"Sarah Todd","handle":"@NBASarah","outlet":"KSL Sports","team":"Utah Jazz","tier":2,"signal":"High","followers":"27K","conf":"W","notes":"KSL Sports Jazz beat"},{"name":"Jody Genessy","handle":"@DJJazzyJody","outlet":"Deseret News","team":"Utah Jazz","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Deseret News veteran Jazz reporter"},{"name":"David Locke","handle":"@DLocke_Jazz","outlet":"Jazz Radio / KSL","team":"Utah Jazz","tier":2,"signal":"Medium","followers":"35K","conf":"W","notes":"Official Jazz radio voice; strong locker-room presence"},{"name":"Shams Charania","handle":"@ShamsCharania","outlet":"ESPN","team":"All Teams","tier":1,"signal":"High","followers":"2.2M","conf":"NAT","notes":"Premier NBA insider; first on everything league-wide"},{"name":"Marc Stein","handle":"@TheSteinLine","outlet":"Substack / Independent","team":"All Teams","tier":1,"signal":"High","followers":"880K","conf":"NAT","notes":"Veteran insider; deep team-by-team sourcing"},{"name":"Chris Haynes","handle":"@ChrisBHaynes","outlet":"TNT / Bleacher Report","team":"All Teams","tier":1,"signal":"High","followers":"1.3M","conf":"NAT","notes":"Top-tier NBA insider; all teams"},{"name":"Jake Fischer","handle":"@JakeLFischer","outlet":"Yahoo Sports","team":"All Teams","tier":1,"signal":"High","followers":"200K","conf":"NAT","notes":"Strong NBA transaction & injury intel"},{"name":"Sam Amick","handle":"@sam_amick","outlet":"The Athletic","team":"All Teams","tier":1,"signal":"High","followers":"168K","conf":"NAT","notes":"The Athletic veteran insider; strong team sourcing"},{"name":"Brian Windhorst","handle":"@WindhorstESPN","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"500K","conf":"NAT","notes":"ESPN NBA analyst; frequent injury context"},{"name":"Tim Bontemps","handle":"@TimBontemps","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"150K","conf":"NAT","notes":"ESPN NBA reporter; multi-team coverage"},{"name":"Keith Smith","handle":"@KeithSmithNBA","outlet":"Spotrac","team":"All Teams","tier":2,"signal":"High","followers":"188K","conf":"NAT","notes":"Cap expert; tracks all personnel & injury-related moves"},{"name":"Kevin O'Connor","handle":"@KevinOConnorNBA","outlet":"The Ringer","team":"All Teams","tier":2,"signal":"Medium","followers":"228K","conf":"NAT","notes":"National analysis with injury context"},{"name":"Ramona Shelburne","handle":"@ramonashelburne","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"380K","conf":"NAT","notes":"ESPN senior writer; deep sourcing across teams"}];
+const REPORTERS = [{"name":"Kevin Chouinard","handle":"@KLChouinard","outlet":"Hawks.com / Zone Coverage","team":"Atlanta Hawks","tier":1,"signal":"High","followers":"28K","conf":"E","notes":"Primary beat; fastest on Hawks injury news; daily practice access"},{"name":"Lauren L. Williams","handle":"@williamslaurenl","outlet":"Atlanta Journal-Constitution","team":"Atlanta Hawks","tier":1,"signal":"High","followers":"22K","conf":"E","notes":"AJC beat; strong locker-room sourcing"},{"name":"Sarah K. Spencer","handle":"@sarah_k_spencer","outlet":"Atlanta Journal-Constitution","team":"Atlanta Hawks","tier":2,"signal":"Medium","followers":"18K","conf":"E","notes":"AJC co-beat; detailed practice notes"},{"name":"Chris Kirschner","handle":"@ChrisKirschner","outlet":"The Athletic","team":"Atlanta Hawks","tier":2,"signal":"High","followers":"58K","conf":"E","notes":"Covers Hawks for The Athletic; breaks news regularly"},{"name":"Quenton Albertie","handle":"@QuentonAlbertie","outlet":"Last Word On Sports","team":"Atlanta Hawks","tier":3,"signal":"Medium","followers":"8K","conf":"E","notes":"Credentialed Hawks media member; covers games regularly"},{"name":"Joe Barberio","handle":"@JoeBarberio","outlet":"FanDuel Sports Network SE","team":"Atlanta Hawks","tier":3,"signal":"Medium","followers":"12K","conf":"E","notes":"Local TV sideline; locker-room access"},{"name":"Jay King","handle":"@ByJayKing","outlet":"The Athletic","team":"Boston Celtics","tier":1,"signal":"High","followers":"98K","conf":"E","notes":"Premier Celtics beat; breaks injury news very fast"},{"name":"Chris Forsberg","handle":"@ChrisForsberg_","outlet":"NBC Sports Boston","team":"Boston Celtics","tier":1,"signal":"High","followers":"80K","conf":"E","notes":"Daily practice coverage; very detailed injury reporting"},{"name":"Gary Washburn","handle":"@GaryWashburn","outlet":"Boston Globe","team":"Boston Celtics","tier":1,"signal":"High","followers":"65K","conf":"E","notes":"Veteran Globe columnist; strong team sourcing"},{"name":"Adam Himmelsbach","handle":"@adamhimmelsbach","outlet":"Boston Globe","team":"Boston Celtics","tier":1,"signal":"High","followers":"48K","conf":"E","notes":"Globe beat writer; co-covers with Washburn"},{"name":"Brian Robb","handle":"@BrianTRobb","outlet":"MassLive","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"40K","conf":"E","notes":"Daily Celtics coverage; good practice reports"},{"name":"John Karalis","handle":"@john_karalis","outlet":"WEEI / Red's Army","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"30K","conf":"E","notes":"Strong Celtics sourcing; well-connected locally"},{"name":"A. Sherrod Blakely","handle":"@SherrodBlakely","outlet":"NBC Boston","team":"Boston Celtics","tier":2,"signal":"Medium","followers":"33K","conf":"E","notes":"Veteran Celtics voice; locker-room access"},{"name":"Tim Bontemps","handle":"@TimBontemps","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"150K","conf":"NAT","notes":"ESPN NBA reporter; multi-team coverage"},{"name":"Erik Slater","handle":"@erikslater_","outlet":"ClutchPoints","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Most plugged-in Nets reporter; very fast on injuries"},{"name":"Alex Schiffer","handle":"@Alex__Schiffer","outlet":"The Athletic","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"42K","conf":"E","notes":"The Athletic Nets beat; strong injury reporting"},{"name":"Brian Lewis","handle":"@NYPost_Lewis","outlet":"New York Post","team":"Brooklyn Nets","tier":1,"signal":"High","followers":"26K","conf":"E","notes":"NY Post Nets beat; locker-room access"},{"name":"Kristian Winfield","handle":"@Krisplashed","outlet":"NY Daily News","team":"New York Knicks","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Strong locker-room access; fast on news"},{"name":"Ryan Rudominer","handle":"@RyanRudominer","outlet":"NetsDaily / FanSided","team":"Brooklyn Nets","tier":2,"signal":"Medium","followers":"16K","conf":"E","notes":"Active Nets digital coverage; credentialed"},{"name":"Ethan Sears","handle":"@EthanJSears","outlet":"New York Post","team":"Brooklyn Nets","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"NY Post Nets contributor; regular coverage"},{"name":"Rod Boone","handle":"@rodboone","outlet":"The Athletic","team":"Charlotte Hornets","tier":1,"signal":"High","followers":"34K","conf":"E","notes":"Most connected Hornets reporter; primary beat"},{"name":"Rick Bonnell","handle":"@rick_bonnell","outlet":"Charlotte Observer","team":"Charlotte Hornets","tier":1,"signal":"High","followers":"30K","conf":"E","notes":"Decades on the Hornets beat; excellent sourcing"},{"name":"James Plowright","handle":"@british_buzz","outlet":"Locked On Hornets","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Credentialed; active daily Hornets coverage"},{"name":"Wynton McLaurin","handle":"@WyntonMcLaurin","outlet":"WCCB Charlotte","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"13K","conf":"E","notes":"Local TV; locker-room access"},{"name":"Mike Eisenberg","handle":"@MikeEisenberg_","outlet":"Hornets Beat","team":"Charlotte Hornets","tier":2,"signal":"Medium","followers":"11K","conf":"E","notes":"Regular credentialed Hornets digital coverage"},{"name":"Steve Reed","handle":"@SteveReedAP","outlet":"Associated Press","team":"Charlotte Hornets","tier":2,"signal":"High","followers":"15K","conf":"E","notes":"AP Charlotte-based reporter; covers Hornets regularly"},{"name":"KC Johnson","handle":"@KCJHoop","outlet":"Chicago Sports Network","team":"Chicago Bulls","tier":1,"signal":"High","followers":"65K","conf":"E","notes":"Dean of Bulls reporters; best injury source by far"},{"name":"Julia Poe","handle":"@byjuliapoe","outlet":"Chicago Tribune","team":"Chicago Bulls","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Tribune beat; active daily practice coverage"},{"name":"Colleen Kane","handle":"@colleenkaneCT","outlet":"Chicago Tribune","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"24K","conf":"E","notes":"Tribune co-beat; covers Bulls regularly"},{"name":"Rob Schaefer","handle":"@rob_schaef","outlet":"NBC Sports Chicago","team":"Chicago Bulls","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"NBC Chicago Bulls reporter; strong locker-room access"},{"name":"Darnell Mayberry","handle":"@DarnellMayberry","outlet":"The Athletic","team":"Chicago Bulls","tier":2,"signal":"High","followers":"35K","conf":"E","notes":"The Athletic Bulls senior writer"},{"name":"Sam Smith","handle":"@SamSmithHoops","outlet":"Bulls.com","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"42K","conf":"E","notes":"Official team site contributor; insider access"},{"name":"Ben Pope","handle":"@BenPopeCST","outlet":"Chicago Sun-Times","team":"Chicago Bulls","tier":2,"signal":"Medium","followers":"18K","conf":"E","notes":"Sun-Times Bulls coverage"},{"name":"Chris Fedor","handle":"@ChrisFedor","outlet":"Cleveland Plain Dealer","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"55K","conf":"E","notes":"Most plugged-in Cavs reporter; best injury source"},{"name":"Joe Vardon","handle":"@joevardon","outlet":"The Athletic","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"52K","conf":"E","notes":"The Athletic Cavs beat; strong injury sourcing"},{"name":"Kelsey Russo","handle":"@kelseyyrusso","outlet":"The Athletic","team":"Cleveland Cavaliers","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"The Athletic co-beat; daily practice notes"},{"name":"Evan Dammarell","handle":"@AmnoteEvan","outlet":"Fear The Sword","team":"Cleveland Cavaliers","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Credentialed Cavs reporter; active coverage"},{"name":"Dan Labbe","handle":"@dan_labbe","outlet":"cleveland.com","team":"Cleveland Cavaliers","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Cleveland.com active Cavs coverage"},{"name":"Camryn Justice","handle":"@camijustice","outlet":"WEWS NewsChannel 5","team":"Cleveland Cavaliers","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Local TV Cavs reporter; locker-room access"},{"name":"Omari Sankofa II","handle":"@omarisankofa","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":1,"signal":"High","followers":"35K","conf":"E","notes":"Lead Pistons reporter at the Freep"},{"name":"Coty Davis","handle":"@CotyDavis_24","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"Freep co-beat with Sankofa"},{"name":"James Edwards III","handle":"@JLEdwardsIII","outlet":"The Athletic","team":"Detroit Pistons","tier":1,"signal":"High","followers":"60K","conf":"E","notes":"The Athletic Pistons beat; strong injury intel"},{"name":"Rod Beard","handle":"@detnewsRodBeard","outlet":"Detroit News","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Detroit News veteran; Pistons beat"},{"name":"Vince Ellis","handle":"@vinceeellis","outlet":"Detroit Free Press","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"19K","conf":"E","notes":"Freep Pistons contributor; active coverage"},{"name":"Dana Gauruder","handle":"@DanaGauruder","outlet":"Detroit News","team":"Detroit Pistons","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Detroit News Pistons co-coverage"},{"name":"Dustin Dopirak","handle":"@DustinDopirak","outlet":"The Athletic","team":"Indiana Pacers","tier":1,"signal":"High","followers":"38K","conf":"E","notes":"Top Pacers source; The Athletic primary beat"},{"name":"Scott Agness","handle":"@ScottAgness","outlet":"FieldhouseFiles.com","team":"Indiana Pacers","tier":1,"signal":"High","followers":"30K","conf":"E","notes":"Dedicated Pacers site; strong locker-room access"},{"name":"James Boyd","handle":"@RomeovilleKid","outlet":"Indianapolis Star","team":"Indiana Pacers","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Indy Star Pacers beat"},{"name":"Tony East","handle":"@TEastNBA","outlet":"SI / Pacers Digest","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Credentialed Pacers media"},{"name":"Nate Taylor","handle":"@ByNateTaylor","outlet":"The Athletic","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"27K","conf":"E","notes":"The Athletic Pacers supplemental coverage"},{"name":"Mark Montieth","handle":"@MontieMedia","outlet":"Pacers.com","team":"Indiana Pacers","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Official team site; insider practice access"},{"name":"Ira Winderman","handle":"@IraHeatBeat","outlet":"South Florida Sun Sentinel","team":"Miami Heat","tier":1,"signal":"High","followers":"108K","conf":"E","notes":"38 seasons covering the Heat; GOAT Heat reporter; injury GOAT source"},{"name":"Anthony Chiang","handle":"@Anthony_Chiang","outlet":"Miami Herald","team":"Miami Heat","tier":1,"signal":"High","followers":"48K","conf":"E","notes":"Herald primary beat; frequent injury updates"},{"name":"Shandel Richardson","handle":"@ShandelRich","outlet":"Sun Sentinel","team":"Miami Heat","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"Sun Sentinel co-beat with Winderman"},{"name":"Brady Hawk","handle":"@BradyHawk305","outlet":"ClutchPoints","team":"Miami Heat","tier":2,"signal":"Medium","followers":"35K","conf":"E","notes":"Active daily Heat coverage; credentialed"},{"name":"Tim Reynolds","handle":"@ByTimReynolds","outlet":"Associated Press","team":"Miami Heat","tier":2,"signal":"High","followers":"40K","conf":"E","notes":"AP NBA reporter; South Florida-based; Heat coverage"},{"name":"Jason Jackson","handle":"@JacksonAndAudio","outlet":"Heat TV","team":"Miami Heat","tier":2,"signal":"Medium","followers":"38K","conf":"E","notes":"Heat TV host; strong locker-room access"},{"name":"Eric Nehm","handle":"@eric_nehm","outlet":"The Athletic","team":"Milwaukee Bucks","tier":1,"signal":"High","followers":"70K","conf":"E","notes":"Premier Bucks reporter; excellent injury intel"},{"name":"Matt Velazquez","handle":"@Matt_Velazquez","outlet":"Milwaukee Journal Sentinel","team":"Milwaukee Bucks","tier":1,"signal":"High","followers":"35K","conf":"E","notes":"Journal Sentinel primary Bucks beat"},{"name":"Jim Owczarski","handle":"@JimOwczarski","outlet":"Milwaukee Journal Sentinel","team":"Milwaukee Bucks","tier":2,"signal":"High","followers":"30K","conf":"E","notes":"JS co-beat; strong locker-room access"},{"name":"James Bates","handle":"@JamesBates_","outlet":"Brew Hoop","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"16K","conf":"E","notes":"Credentialed Bucks digital site"},{"name":"Phoebe Arscott","handle":"@PArscott_","outlet":"Bally Sports Wisconsin","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Local TV; game-day locker-room access"},{"name":"Jaymes Langrehr","handle":"@jlangrehr","outlet":"WISN 12","team":"Milwaukee Bucks","tier":2,"signal":"Medium","followers":"12K","conf":"E","notes":"Local TV Bucks reporter; credentialed"},{"name":"Ian Begley","handle":"@IanBegley","outlet":"SNY","team":"New York Knicks","tier":1,"signal":"High","followers":"150K","conf":"E","notes":"Most connected Knicks reporter; fastest on injuries"},{"name":"Steve Popper","handle":"@StevePopper","outlet":"Newsday","team":"New York Knicks","tier":1,"signal":"High","followers":"44K","conf":"E","notes":"Longest-tenured Knicks beat writer"},{"name":"Fred Katz","handle":"@FredKatz","outlet":"The Athletic","team":"New York Knicks","tier":2,"signal":"High","followers":"65K","conf":"E","notes":"Now national writer but deep Knicks sourcing"},{"name":"Marc Berman","handle":"@NYPost_Berman","outlet":"New York Post","team":"New York Knicks","tier":2,"signal":"High","followers":"34K","conf":"E","notes":"NY Post veteran Knicks writer"},{"name":"Alan Hahn","handle":"@alanhahn","outlet":"MSG Network","team":"New York Knicks","tier":2,"signal":"Medium","followers":"60K","conf":"E","notes":"MSG broadcast analyst; locker-room access"},{"name":"Stefan Bondy","handle":"@SBondyNYDN","outlet":"NY Daily News","team":"New York Knicks","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"Daily News Knicks co-coverage"},{"name":"Jason Beede","handle":"@therealBeede","outlet":"Orlando Sentinel","team":"Orlando Magic","tier":1,"signal":"High","followers":"27K","conf":"E","notes":"Primary Magic beat writer"},{"name":"Khobi Price","handle":"@khobi_price","outlet":"Orlando Sentinel","team":"Orlando Magic","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"Sentinel co-beat with Beede"},{"name":"Evan Dunlap","handle":"@EvanDunlap13","outlet":"ClutchPoints","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Active credentialed Magic coverage"},{"name":"Bo Churney","handle":"@BoChurney","outlet":"Locked On Magic","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"15K","conf":"E","notes":"Daily Magic credentialed reporter"},{"name":"Josh Robbins","handle":"@JoshuaBRobbins","outlet":"The Athletic","team":"Washington Wizards","tier":1,"signal":"High","followers":"40K","conf":"E","notes":"Primary Wizards source at The Athletic"},{"name":"Scott Anez","handle":"@ScottAnez","outlet":"AP","team":"Orlando Magic","tier":2,"signal":"Medium","followers":"12K","conf":"E","notes":"AP Orlando-based reporter; covers Magic"},{"name":"Keith Pompey","handle":"@PompeyOnSixers","outlet":"Philadelphia Inquirer","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"68K","conf":"E","notes":"Dean of Sixers reporters; best injury source"},{"name":"Kyle Neubeck","handle":"@KyleNeubeck","outlet":"PhillyVoice","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Primary beat; strong daily locker-room access"},{"name":"Rich Hofmann","handle":"@rich_hofmann","outlet":"The Athletic","team":"Philadelphia 76ers","tier":1,"signal":"High","followers":"45K","conf":"E","notes":"The Athletic Sixers beat; excellent injury intel"},{"name":"Gina Mizell","handle":"@GinaMizell","outlet":"Philadelphia Inquirer","team":"Philadelphia 76ers","tier":2,"signal":"High","followers":"27K","conf":"E","notes":"Inquirer co-beat; good injury coverage"},{"name":"Tony Jones","handle":"@Tjonesonthenba","outlet":"The Athletic","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"69K","conf":"E","notes":""},{"name":"Derek Bodner","handle":"@DerekBodner","outlet":"The Athletic / IndyPHL","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"32K","conf":"E","notes":"Strong Sixers sourcing; veteran local reporter"},{"name":"Jonathan Wasserman","handle":"@NBADraftWass","outlet":"Bleacher Report","team":"Philadelphia 76ers","tier":2,"signal":"Medium","followers":"40K","conf":"E","notes":"Strong Sixers personnel sourcing"},{"name":"Josh Lewenberg","handle":"@JLew1050","outlet":"TSN","team":"Toronto Raptors","tier":1,"signal":"High","followers":"95K","conf":"E","notes":"Premier Raptors reporter; very reliable on injuries"},{"name":"Doug Smith","handle":"@dougsmithstar","outlet":"Toronto Star","team":"Toronto Raptors","tier":1,"signal":"High","followers":"58K","conf":"E","notes":"Veteran Star Raptors beat writer"},{"name":"Michael Grange","handle":"@michaelgrange","outlet":"Sportsnet","team":"Toronto Raptors","tier":1,"signal":"High","followers":"50K","conf":"E","notes":"Sportsnet Raptors analyst and reporter"},{"name":"Eric Koreen","handle":"@ekoreen","outlet":"The Athletic","team":"Toronto Raptors","tier":2,"signal":"High","followers":"40K","conf":"E","notes":"The Athletic Raptors coverage"},{"name":"Vivek Jacob","handle":"@vivekjacob_","outlet":"Sportsnet","team":"Toronto Raptors","tier":2,"signal":"High","followers":"24K","conf":"E","notes":"Regular credentialed Raptors coverage"},{"name":"Blake Murphy","handle":"@BlakeMurphyODC","outlet":"The Athletic / Raptors Republic","team":"Toronto Raptors","tier":2,"signal":"Medium","followers":"30K","conf":"E","notes":"Strong Raptors sourcing; credentialed"},{"name":"Ava Wallace","handle":"@avarwallace","outlet":"Washington Post","team":"Washington Wizards","tier":1,"signal":"High","followers":"27K","conf":"E","notes":"Washington Post Wizards beat"},{"name":"Bijan Todd","handle":"@bijan_todd","outlet":"NBC Sports Washington","team":"Washington Wizards","tier":1,"signal":"High","followers":"24K","conf":"E","notes":"NBC Washington Wizards reporter"},{"name":"Chase Hughes","handle":"@ChaseHughesNBC","outlet":"NBC Sports Washington","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"20K","conf":"E","notes":"Regular Wizards credentialed reporter"},{"name":"Kareem Copeland","handle":"@kareemcopeland","outlet":"Washington Post","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"22K","conf":"E","notes":"WaPo co-beat coverage"},{"name":"Zach Selby","handle":"@ZachSelby_DC","outlet":"Wizards.com","team":"Washington Wizards","tier":2,"signal":"Medium","followers":"14K","conf":"E","notes":"Official team site; insider practice access"},{"name":"Tim MacMahon","handle":"@espn_macmahon","outlet":"ESPN","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"185K","conf":"W","notes":"ESPN Mavs beat; top injury source for Dallas"},{"name":"Brad Townsend","handle":"@townbrad","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"48K","conf":"W","notes":"DMN veteran Mavs beat; decades on beat"},{"name":"Callie Caplan","handle":"@CallieCaplan","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":1,"signal":"High","followers":"32K","conf":"W","notes":"DMN Mavs reporter; active injury coverage"},{"name":"Grant Afseth","handle":"@GrantAfseth","outlet":"ClutchPoints","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"Active daily Mavs coverage; credentialed"},{"name":"Mike Curtis","handle":"@MikeACurtis2","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"32K","conf":"W","notes":"DMN Mavs contributor"},{"name":"Eddie Sefko","handle":"@ESefko","outlet":"Dallas Morning News","team":"Dallas Mavericks","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Longtime Mavs coverage veteran"},{"name":"Tim Cato","handle":"@tim_cato","outlet":"ALLCITY","team":"Dallas Mavericks","tier":2,"signal":"Medium","followers":"30K","conf":"W","notes":""},{"name":"Saad Yousuf","handle":"@SaadYousuf126","outlet":"The Athletic","team":"Dallas Mavericks","tier":2,"signal":"High","followers":"35K","conf":"W","notes":"The Athletic Mavs beat writer"},{"name":"Bennett Durando","handle":"@BennettDurando","outlet":"Denver Post","team":"Denver Nuggets","tier":1,"signal":"High","followers":"35K","conf":"W","notes":"Denver Post primary Nuggets beat"},{"name":"Mike Singer","handle":"@msinger","outlet":"Denver Post","team":"Denver Nuggets","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Denver Post co-beat; strong injury coverage"},{"name":"Harrison Wind","handle":"@HarrisonWind","outlet":"DNVR Sports","team":"Denver Nuggets","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"DNVR Nuggets credentialed site; very active"},{"name":"Adam Mares","handle":"@adam_mares","outlet":"104.3 The Fan","team":"Denver Nuggets","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Local radio beat; daily access"},{"name":"Chris Dempsey","handle":"@chrisadempsey","outlet":"Altitude Sports","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Local TV reporter; game access"},{"name":"Katy Winge","handle":"@katywinge","outlet":"Altitude Sports TV","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"66K","conf":"W","notes":""},{"name":"Ryan Blackburn","handle":"@NBABlackburn","outlet":"Mile High Sports","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":""},{"name":"Gina De La Vega","handle":"@GinaDelaVega_","outlet":"Altitude Sports TV","team":"Denver Nuggets","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Altitude TV Nuggets sideline reporter"},{"name":"Anthony Slater","handle":"@anthonyVslater","outlet":"ESPN","team":"Golden State Warriors","tier":1,"signal":"High","followers":"195K","conf":"W","notes":"Left The Athletic for ESPN 2025; premier Warriors reporter"},{"name":"Marcus Thompson","handle":"@marcus_thompson","outlet":"The Athletic","team":"Golden State Warriors","tier":1,"signal":"High","followers":"88K","conf":"W","notes":"Veteran Warriors columnist; strong injury sourcing"},{"name":"Dalton Johnson","handle":"@DaltonJ_","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Active daily Warriors practice reports"},{"name":"Sam Gordon","handle":"@bysamgordon","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"NBC Bay Area Warriors beat reporter"},{"name":"Nick Friedell","handle":"@NickFriedell","outlet":"ESPN","team":"Golden State Warriors","tier":2,"signal":"High","followers":"48K","conf":"W","notes":"ESPN Warriors reporter; supplements Slater"},{"name":"Rusty Simmons","handle":"@Rusty_SFChron","outlet":"San Francisco Chronicle","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Chronicle Warriors coverage"},{"name":"Tim Kawkami","handle":"@timkawakami","outlet":"SF Standard","team":"Golden State Warriors","tier":1,"signal":"High","followers":"112K","conf":"W","notes":""},{"name":"Monte Poole","handle":"@montePooleNBCS","outlet":"NBC Sports Bay Area","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"65K","conf":"W","notes":""},{"name":"Connor Letourneau","handle":"@Con_Chron","outlet":"San Francisco Chronicle","team":"Golden State Warriors","tier":2,"signal":"Medium","followers":"22K","conf":"W","notes":"Chronicle Dubs beat; regular practice coverage"},{"name":"Jonathan Feigen","handle":"@Jonathan_Feigen","outlet":"Houston Chronicle","team":"Houston Rockets","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Decades on the beat; sole primary Rockets reporter"},{"name":"Kelly Iko","handle":"@KellyIko","outlet":"The Athletic","team":"Houston Rockets","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"The Athletic Rockets beat; strong injury sourcing"},{"name":"Ben DuBose","handle":"@BenDuBose","outlet":"Space City Home Network","team":"Houston Rockets","tier":2,"signal":"High","followers":"28K","conf":"W","notes":"Active credentialed Rockets reporter"},{"name":"Lachard Binkley","handle":"@BinkleyHoops","outlet":"Locked On Rockets","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Credentialed Rockets digital coverage"},{"name":"Adam Spolane","handle":"@AdamSpolane","outlet":"Sports Radio 610","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"22K","conf":"W","notes":"Houston radio beat; locker-room access"},{"name":"Jackson Gatlin","handle":"@JacksonGatlin1","outlet":"Clutch City Sports","team":"Houston Rockets","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"Credentialed Rockets coverage"},{"name":"Tomer Azarly","handle":"@TomerAzarly","outlet":"ClutchPoints","team":"LA Clippers","tier":1,"signal":"High","followers":"75K","conf":"W","notes":"Most connected Clippers reporter; very fast on injuries"},{"name":"Law Murray","handle":"@LawMurrayTheNU","outlet":"The Athletic","team":"LA Clippers","tier":1,"signal":"High","followers":"58K","conf":"W","notes":"The Athletic Clippers beat; strong locker-room presence"},{"name":"Joey Linn","handle":"@joeylinn_","outlet":"The Athletic","team":"LA Clippers","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"The Athletic co-beat; daily Clippers access"},{"name":"Mirjam Swanson","handle":"@MirjamSwanson","outlet":"LA Daily News","team":"LA Clippers","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Daily News Clippers coverage"},{"name":"Andrew Greif","handle":"@AndrewGreif","outlet":"Los Angeles Times","team":"LA Clippers","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"LA Times Clippers beat"},{"name":"Broderick Turner","handle":"@BA_Turner","outlet":"Los Angeles Times","team":"LA Clippers","tier":2,"signal":"Medium","followers":"25K","conf":"W","notes":"LA Times Clippers contributor"},{"name":"Mike Trudell","handle":"@LakersReporter","outlet":"Spectrum SportsNet","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"135K","conf":"W","notes":"Most connected Lakers reporter; fastest on injuries"},{"name":"Dan Woike","handle":"@DanWoike","outlet":"The Athletic","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Replaced Buha at The Athletic on Lakers beat, June 2025"},{"name":"Dave McMenamin","handle":"@mcten","outlet":"ESPN","team":"Los Angeles Lakers","tier":1,"signal":"High","followers":"100K","conf":"W","notes":"ESPN Lakers insider; strong injury sourcing"},{"name":"Kyle Goon","handle":"@kylegoon","outlet":"Southern California News Group","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"32K","conf":"W","notes":"SCNG Lakers active beat writer"},{"name":"Jovan Buha","handle":"@jovanbuha","outlet":"YouTube / Independent","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"80K","conf":"W","notes":"Left The Athletic; continues covering Lakers independently"},{"name":"Bill Oram","handle":"@billoram","outlet":"The Athletic","team":"Los Angeles Lakers","tier":2,"signal":"Medium","followers":"30K","conf":"W","notes":"The Athletic Lakers supplemental coverage"},{"name":"Ohm Youngmisuk","handle":"@NotoriousOHM","outlet":"ESPN","team":"Los Angeles Lakers","tier":2,"signal":"High","followers":"52K","conf":"W","notes":"ESPN LA-based NBA reporter; covers Lakers"},{"name":"Damichael Cole","handle":"@DamichaelC","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":1,"signal":"High","followers":"22K","conf":"W","notes":"Primary Grizzlies beat writer"},{"name":"Drew Hill","handle":"@DrewHill_DM","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":1,"signal":"High","followers":"17K","conf":"W","notes":"Commercial Appeal co-beat"},{"name":"Chris Herrington","handle":"@ChrisHerrington","outlet":"The Daily Memphian","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"26K","conf":"W","notes":""},{"name":"Evan Barnes","handle":"@evan_b","outlet":"Memphis Commercial Appeal","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"MCA Grizzlies supplemental coverage"},{"name":"Joe Mullinax","handle":"@sidelineSCOUT","outlet":"GrizznessNBA","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"16K","conf":"W","notes":"Credentialed Grizzlies digital coverage"},{"name":"Jared Ramsey","handle":"@JaredRamseyNBA","outlet":"Grind City Media","team":"Memphis Grizzlies","tier":2,"signal":"Medium","followers":"13K","conf":"W","notes":"Credentialed Grizzlies digital media"},{"name":"Jon Krawczynski","handle":"@JonKrawczynski","outlet":"The Athletic","team":"Minnesota Timberwolves","tier":1,"signal":"High","followers":"80K","conf":"W","notes":"Elite Wolves reporter; best NBA beat writer per many; top injury source"},{"name":"Chris Hine","handle":"@ChristopherHine","outlet":"Minneapolis Star Tribune","team":"Minnesota Timberwolves","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Star Tribune primary Wolves beat"},{"name":"Dane Moore","handle":"@DaneMooreNBA","outlet":"Dane Moore NBA Podcast","team":"Minnesota Timberwolves","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"Credentialed Wolves media; very active on injuries"},{"name":"Jace Frederick","handle":"@JaceFrederick","outlet":"Pioneer Press","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"19K","conf":"W","notes":""},{"name":"Tina Winder","handle":"@TinaWinder","outlet":"Bally Sports North","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Local TV; locker-room access"},{"name":"Michael Rand","handle":"@RandBall","outlet":"Minneapolis Star Tribune","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"27K","conf":"W","notes":"Star Tribune sports columnist; covers Wolves"},{"name":"Kelly Vogel","handle":"@KellyVogelNBA","outlet":"KSTP","team":"Minnesota Timberwolves","tier":2,"signal":"Medium","followers":"15K","conf":"W","notes":"Local TV Wolves reporter; credentialed"},{"name":"Jim Eichenhofer","handle":"@Jim_Eichenhofer","outlet":"Pelicans.com","team":"New Orleans Pelicans","tier":1,"signal":"High","followers":"34K","conf":"W","notes":"Official team site; unusually reliable; fast on injury news"},{"name":"Will Guillory","handle":"@WillGuillory","outlet":"The Athletic","team":"New Orleans Pelicans","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"The Athletic Pelicans primary beat"},{"name":"Christian Clark","handle":"@cclark_13","outlet":"New Orleans Times-Picayune","team":"New Orleans Pelicans","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Times-Picayune Pelicans beat"},{"name":"Oleh Kosel","handle":"@OlehKosel","outlet":"The Bird Writes","team":"New Orleans Pelicans","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Credentialed digital Pelicans coverage"},{"name":"Rod Walker","handle":"@RodWalkerNBA","outlet":"New Orleans Advocate","team":"New Orleans Pelicans","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Advocate Pelicans beat writer"},{"name":"Andrew Lopez","handle":"@_Andrew_Lopez","outlet":"ESPN","team":"New Orleans Pelicans","tier":2,"signal":"High","followers":"38K","conf":"W","notes":"ESPN New Orleans-based Pelicans reporter"},{"name":"Brandon Rahbar","handle":"@BrandonRahbar","outlet":"Daily Thunder","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"Premier Thunder reporter; fastest on OKC injuries"},{"name":"Joel Lorenzi","handle":"@jxlorenzi","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"24K","conf":"W","notes":"Oklahoman primary Thunder beat writer"},{"name":"Rylan Stiles","handle":"@Rylan_Stiles","outlet":"Inside The Thunder / Locked On","team":"Oklahoma City Thunder","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"Credentialed; hosts Locked On Thunder; strong injury intel"},{"name":"Justin Martinez","handle":"@JMartNBA","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":2,"signal":"High","followers":"18K","conf":"W","notes":"Oklahoman Thunder trending/coverage reporter"},{"name":"Joe Mussatto","handle":"@JoeMussattoSCR","outlet":"The Oklahoman","team":"Oklahoma City Thunder","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Former Thunder beat; still deep Thunder sourcing"},{"name":"Gerald Bourguet","handle":"@GeraldBourguet","outlet":"PHNX Media","team":"Phoenix Suns","tier":1,"signal":"High","followers":"60K","conf":"W","notes":"Top Suns reporter; breaks injury news first"},{"name":"Duane Rankin","handle":"@DuaneRankin","outlet":"Arizona Republic","team":"Phoenix Suns","tier":1,"signal":"High","followers":"44K","conf":"W","notes":"Arizona Republic Suns veteran"},{"name":"Kellan Olson","handle":"@kellanolson","outlet":"Arizona Republic","team":"Phoenix Suns","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Republic co-beat; active injury reporting"},{"name":"John Gambadoro","handle":"@Gambo987","outlet":"Arizona Sports 98.7","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"38K","conf":"W","notes":"Local radio; strong Suns sourcing"},{"name":"Bo Brack","handle":"@BoBrack","outlet":"PHNX Sports","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"PHNX co-beat; regular practice coverage"},{"name":"Ty Tasker","handle":"@TyTasker","outlet":"PHNX Sports","team":"Phoenix Suns","tier":2,"signal":"Medium","followers":"16K","conf":"W","notes":"PHNX Suns contributor; credentialed"},{"name":"Casey Holdahl","handle":"@CHold","outlet":"TrailBlazers.com","team":"Portland Trail Blazers","tier":1,"signal":"High","followers":"35K","conf":"W","notes":"Team site; very detailed practice notes; Tier 1 reliability"},{"name":"Jason Quick","handle":"@jwquick","outlet":"The Athletic","team":"Portland Trail Blazers","tier":1,"signal":"High","followers":"50K","conf":"W","notes":"The Athletic Blazers beat veteran"},{"name":"Sean Highkin","handle":"@highkin","outlet":"Rose Garden Report","team":"Portland Trail Blazers","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Credentialed independent Blazers reporter"},{"name":"Aaron Fentress","handle":"@AaronJFentress","outlet":"The Oregonian","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"24K","conf":"W","notes":"Oregonian Blazers coverage"},{"name":"Joe Freeman","handle":"@BlazerFreeman","outlet":"The Oregonian","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":""},{"name":"Jamie Hudson","handle":"@JamieHudson_","outlet":"NBC Sports Northwest","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"Local TV; locker-room access"},{"name":"Kerry Eggers","handle":"@KerryEggers","outlet":"Portland Tribune","team":"Portland Trail Blazers","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Portland Tribune; veteran Blazers beat"},{"name":"James Ham","handle":"@James_HamNBA","outlet":"NBC Sports California","team":"Sacramento Kings","tier":1,"signal":"High","followers":"44K","conf":"W","notes":"Most connected Kings reporter; decades on beat"},{"name":"Jason Anderson","handle":"@JandersonSacBee","outlet":"Sacramento Bee","team":"Sacramento Kings","tier":1,"signal":"High","followers":"27K","conf":"W","notes":"Sacramento Bee Kings primary beat"},{"name":"Sean Cunningham","handle":"@seancunningham45","outlet":"ABC10 Sacramento","team":"Sacramento Kings","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Local TV; strong locker-room access"},{"name":"Frankie Cartoscelli","handle":"@FCartoscelli3","outlet":"Sactown Sports 1140","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"10K","conf":"W","notes":""},{"name":"Brenden Nunes","handle":"@BrendenNunesNBA","outlet":"Sactown Sports 1140","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"11K","conf":"W","notes":""},{"name":"Mike Richman","handle":"@MikeRichman","outlet":"Kings.com","team":"Sacramento Kings","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Official team site; good injury and practice detail"},{"name":"Mychael Urban","handle":"@MychealUrban","outlet":"NBC Sports California","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"20K","conf":"W","notes":"NBC CA Kings supplemental reporter"},{"name":"Matt George","handle":"@MattGeorge975","outlet":"95.7 The Game / KHTK","team":"Sacramento Kings","tier":2,"signal":"Medium","followers":"18K","conf":"W","notes":"Sacramento radio; locker-room access"},{"name":"Jeff McDonald","handle":"@JMcDonald_SAEN","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":1,"signal":"High","followers":"40K","conf":"W","notes":"Lead Spurs beat writer at Express-News"},{"name":"Tom Orsborn","handle":"@tom_orsborn","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":1,"signal":"High","followers":"30K","conf":"W","notes":"Express-News co-beat; strong practice notes"},{"name":"Paul Garcia","handle":"@PaulGarciaNBA","outlet":"Project Spurs / Locked On","team":"San Antonio Spurs","tier":2,"signal":"High","followers":"30K","conf":"W","notes":"Credentialed Spurs digital coverage"},{"name":"Mike Finger","handle":"@mikefinger","outlet":"San Antonio Express-News","team":"San Antonio Spurs","tier":2,"signal":"Medium","followers":"27K","conf":"W","notes":"SAEN sports columnist; Spurs-focused"},{"name":"Jabari Young","handle":"@JabariJYoung","outlet":"CNBC / Sports Business","team":"San Antonio Spurs","tier":2,"signal":"Medium","followers":"28K","conf":"W","notes":"Former Spurs beat; still well-sourced in SA"},{"name":"Damian Arseneault","handle":"@DamianArseneault","outlet":"The Athletic","team":"San Antonio Spurs","tier":2,"signal":"High","followers":"20K","conf":"W","notes":"The Athletic Spurs coverage"},{"name":"Andy Larsen","handle":"@andyblarsen","outlet":"Salt Lake Tribune","team":"Utah Jazz","tier":1,"signal":"High","followers":"55K","conf":"W","notes":"Top Jazz reporter; stat-savvy injury coverage"},{"name":"Eric Walden","handle":"@tribjazz","outlet":"Salt Lake Tribune","team":"Utah Jazz","tier":1,"signal":"High","followers":"30K","conf":"W","notes":"Tribune co-beat with Larsen"},{"name":"Sarah Todd","handle":"@NBASarah","outlet":"KSL Sports","team":"Utah Jazz","tier":2,"signal":"High","followers":"27K","conf":"W","notes":"KSL Sports Jazz beat"},{"name":"Jody Genessy","handle":"@DJJazzyJody","outlet":"Deseret News","team":"Utah Jazz","tier":2,"signal":"High","followers":"24K","conf":"W","notes":"Deseret News veteran Jazz reporter"},{"name":"David Locke","handle":"@DLocke_Jazz","outlet":"Jazz Radio / KSL","team":"Utah Jazz","tier":2,"signal":"Medium","followers":"35K","conf":"W","notes":"Official Jazz radio voice; strong locker-room presence"},{"name":"Shams Charania","handle":"@ShamsCharania","outlet":"ESPN","team":"All Teams","tier":1,"signal":"High","followers":"2.2M","conf":"NAT","notes":"Premier NBA insider; first on everything league-wide"},{"name":"Marc Stein","handle":"@TheSteinLine","outlet":"Substack / Independent","team":"All Teams","tier":1,"signal":"High","followers":"880K","conf":"NAT","notes":"Veteran insider; deep team-by-team sourcing"},{"name":"Chris Haynes","handle":"@ChrisBHaynes","outlet":"TNT / Bleacher Report","team":"All Teams","tier":1,"signal":"High","followers":"1.3M","conf":"NAT","notes":"Top-tier NBA insider; all teams"},{"name":"Jake Fischer","handle":"@JakeLFischer","outlet":"Yahoo Sports","team":"All Teams","tier":1,"signal":"High","followers":"200K","conf":"NAT","notes":"Strong NBA transaction & injury intel"},{"name":"Sam Amick","handle":"@sam_amick","outlet":"The Athletic","team":"All Teams","tier":1,"signal":"High","followers":"168K","conf":"NAT","notes":"The Athletic veteran insider; strong team sourcing"},{"name":"Brian Windhorst","handle":"@WindhorstESPN","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"500K","conf":"NAT","notes":"ESPN NBA analyst; frequent injury context"},{"name":"Keith Smith","handle":"@KeithSmithNBA","outlet":"Spotrac","team":"All Teams","tier":2,"signal":"High","followers":"188K","conf":"NAT","notes":"Cap expert; tracks all personnel & injury-related moves"},{"name":"Kevin O'Connor","handle":"@KevinOConnorNBA","outlet":"The Ringer","team":"All Teams","tier":2,"signal":"Medium","followers":"228K","conf":"NAT","notes":"National analysis with injury context"},{"name":"Ramona Shelburne","handle":"@ramonashelburne","outlet":"ESPN","team":"All Teams","tier":2,"signal":"High","followers":"380K","conf":"NAT","notes":"ESPN senior writer; deep sourcing across teams"}];
 
 // ─── ARCH PANEL TOGGLE ───────────────────────────────────────────────────────
 function toggleArch() {
@@ -1667,9 +1667,384 @@ function extractInjuryLabel(text) {
   return 'Injury';
 }
 
-// Very rough player name extraction — looks for capitalized name patterns near injury words
+// ─── NBA PLAYER ROSTER (2024-25 season) ───────────────────────────────────────
+// Maps canonical name → { team, position }
+const NBA_PLAYER_LOOKUP = {
+  // Atlanta Hawks
+  'Trae Young':{'team':'Atlanta Hawks','position':'PG'},
+  'Dejounte Murray':{'team':'Atlanta Hawks','position':'PG'},
+  'Jalen Johnson':{'team':'Atlanta Hawks','position':'SF'},
+  'Clint Capela':{'team':'Atlanta Hawks','position':'C'},
+  'De\'Andre Hunter':{'team':'Atlanta Hawks','position':'SF'},
+  'Bogdan Bogdanovic':{'team':'Atlanta Hawks','position':'SG'},
+  'Saddiq Bey':{'team':'Atlanta Hawks','position':'SF'},
+  // Boston Celtics
+  'Jayson Tatum':{'team':'Boston Celtics','position':'SF'},
+  'Jaylen Brown':{'team':'Boston Celtics','position':'SG'},
+  'Kristaps Porzingis':{'team':'Boston Celtics','position':'C'},
+  'Jrue Holiday':{'team':'Boston Celtics','position':'PG'},
+  'Al Horford':{'team':'Boston Celtics','position':'C'},
+  'Payton Pritchard':{'team':'Boston Celtics','position':'PG'},
+  'Sam Hauser':{'team':'Boston Celtics','position':'SF'},
+  'Luke Kornet':{'team':'Boston Celtics','position':'C'},
+  // Brooklyn Nets
+  'Cam Thomas':{'team':'Brooklyn Nets','position':'SG'},
+  'Nic Claxton':{'team':'Brooklyn Nets','position':'C'},
+  'Ben Simmons':{'team':'Brooklyn Nets','position':'PG'},
+  'Dennis Schroder':{'team':'Brooklyn Nets','position':'PG'},
+  'Dorian Finney-Smith':{'team':'Brooklyn Nets','position':'SF'},
+  'Noah Clowney':{'team':'Brooklyn Nets','position':'PF'},
+  // Charlotte Hornets
+  'LaMelo Ball':{'team':'Charlotte Hornets','position':'PG'},
+  'Brandon Miller':{'team':'Charlotte Hornets','position':'SF'},
+  'Mark Williams':{'team':'Charlotte Hornets','position':'C'},
+  'Miles Bridges':{'team':'Charlotte Hornets','position':'SF'},
+  'Grant Williams':{'team':'Charlotte Hornets','position':'PF'},
+  'Tre Mann':{'team':'Charlotte Hornets','position':'SG'},
+  // Chicago Bulls
+  'Zach LaVine':{'team':'Chicago Bulls','position':'SG'},
+  'Nikola Vucevic':{'team':'Chicago Bulls','position':'C'},
+  'DeMar DeRozan':{'team':'Chicago Bulls','position':'SF'},
+  'Coby White':{'team':'Chicago Bulls','position':'PG'},
+  'Ayo Dosunmu':{'team':'Chicago Bulls','position':'SG'},
+  'Patrick Williams':{'team':'Chicago Bulls','position':'PF'},
+  'Josh Giddey':{'team':'Chicago Bulls','position':'PG'},
+  'Matas Buzelis':{'team':'Chicago Bulls','position':'PF'},
+  // Cleveland Cavaliers
+  'Donovan Mitchell':{'team':'Cleveland Cavaliers','position':'SG'},
+  'Darius Garland':{'team':'Cleveland Cavaliers','position':'PG'},
+  'Jarrett Allen':{'team':'Cleveland Cavaliers','position':'C'},
+  'Evan Mobley':{'team':'Cleveland Cavaliers','position':'PF'},
+  'Max Strus':{'team':'Cleveland Cavaliers','position':'SG'},
+  'Dean Wade':{'team':'Cleveland Cavaliers','position':'PF'},
+  // Dallas Mavericks
+  'Luka Doncic':{'team':'Dallas Mavericks','position':'PG'},
+  'Kyrie Irving':{'team':'Dallas Mavericks','position':'PG'},
+  'PJ Washington':{'team':'Dallas Mavericks','position':'PF'},
+  'Derrick Jones Jr':{'team':'Dallas Mavericks','position':'SF'},
+  'Naji Marshall':{'team':'Dallas Mavericks','position':'SF'},
+  'Klay Thompson':{'team':'Dallas Mavericks','position':'SG'},
+  'Spencer Dinwiddie':{'team':'Dallas Mavericks','position':'PG'},
+  // Denver Nuggets
+  'Nikola Jokic':{'team':'Denver Nuggets','position':'C'},
+  'Jamal Murray':{'team':'Denver Nuggets','position':'PG'},
+  'Michael Porter Jr':{'team':'Denver Nuggets','position':'SF'},
+  'Aaron Gordon':{'team':'Denver Nuggets','position':'PF'},
+  'Kentavious Caldwell-Pope':{'team':'Denver Nuggets','position':'SG'},
+  'Reggie Jackson':{'team':'Denver Nuggets','position':'PG'},
+  'Peyton Watson':{'team':'Denver Nuggets','position':'SF'},
+  'Zeke Nnaji':{'team':'Denver Nuggets','position':'PF'},
+  // Detroit Pistons
+  'Cade Cunningham':{'team':'Detroit Pistons','position':'PG'},
+  'Jalen Duren':{'team':'Detroit Pistons','position':'C'},
+  'Ausar Thompson':{'team':'Detroit Pistons','position':'SF'},
+  'Tobias Harris':{'team':'Detroit Pistons','position':'PF'},
+  'Caris LeVert':{'team':'Detroit Pistons','position':'SG'},
+  'Isaiah Stewart':{'team':'Detroit Pistons','position':'PF'},
+  'Ron Holland':{'team':'Detroit Pistons','position':'SF'},
+  'Monte Morris':{'team':'Detroit Pistons','position':'PG'},
+  'Simone Fontecchio':{'team':'Detroit Pistons','position':'SF'},
+  'Bojan Bogdanovic':{'team':'Detroit Pistons','position':'SF'},
+  'Marcus Sasser':{'team':'Detroit Pistons','position':'SG'},
+  'Killian Hayes':{'team':'Detroit Pistons','position':'PG'},
+  // Golden State Warriors
+  'Stephen Curry':{'team':'Golden State Warriors','position':'PG'},
+  'Draymond Green':{'team':'Golden State Warriors','position':'PF'},
+  'Jonathan Kuminga':{'team':'Golden State Warriors','position':'PF'},
+  'Andrew Wiggins':{'team':'Golden State Warriors','position':'SF'},
+  'Brandin Podziemski':{'team':'Golden State Warriors','position':'SG'},
+  'Trayce Jackson-Davis':{'team':'Golden State Warriors','position':'C'},
+  'Moses Moody':{'team':'Golden State Warriors','position':'SG'},
+  'Buddy Hield':{'team':'Golden State Warriors','position':'SG'},
+  'De\'Anthony Melton':{'team':'Golden State Warriors','position':'SG'},
+  // Houston Rockets
+  'Alperen Sengun':{'team':'Houston Rockets','position':'C'},
+  'Jalen Green':{'team':'Houston Rockets','position':'SG'},
+  'Fred VanVleet':{'team':'Houston Rockets','position':'PG'},
+  'Dillon Brooks':{'team':'Houston Rockets','position':'SF'},
+  'Jabari Smith Jr':{'team':'Houston Rockets','position':'PF'},
+  'Amen Thompson':{'team':'Houston Rockets','position':'SF'},
+  'Tari Eason':{'team':'Houston Rockets','position':'PF'},
+  'Steven Adams':{'team':'Houston Rockets','position':'C'},
+  'Aaron Holiday':{'team':'Houston Rockets','position':'PG'},
+  // Indiana Pacers
+  'Tyrese Haliburton':{'team':'Indiana Pacers','position':'PG'},
+  'Pascal Siakam':{'team':'Indiana Pacers','position':'PF'},
+  'Myles Turner':{'team':'Indiana Pacers','position':'C'},
+  'Andrew Nembhard':{'team':'Indiana Pacers','position':'PG'},
+  'Bennedict Mathurin':{'team':'Indiana Pacers','position':'SG'},
+  'Aaron Nesmith':{'team':'Indiana Pacers','position':'SF'},
+  'Obi Toppin':{'team':'Indiana Pacers','position':'PF'},
+  'T.J. McConnell':{'team':'Indiana Pacers','position':'PG'},
+  'Isaiah Jackson':{'team':'Indiana Pacers','position':'C'},
+  'Ben Sheppard':{'team':'Indiana Pacers','position':'SF'},
+  // LA Clippers
+  'Kawhi Leonard':{'team':'LA Clippers','position':'SF'},
+  'James Harden':{'team':'LA Clippers','position':'PG'},
+  'Ivica Zubac':{'team':'LA Clippers','position':'C'},
+  'Norman Powell':{'team':'LA Clippers','position':'SG'},
+  'Russell Westbrook':{'team':'LA Clippers','position':'PG'},
+  'Kevin Porter Jr':{'team':'LA Clippers','position':'SG'},
+  'Bones Hyland':{'team':'LA Clippers','position':'PG'},
+  // Los Angeles Lakers
+  'LeBron James':{'team':'Los Angeles Lakers','position':'SF'},
+  'Anthony Davis':{'team':'Los Angeles Lakers','position':'C'},
+  'Austin Reaves':{'team':'Los Angeles Lakers','position':'SG'},
+  'D\'Angelo Russell':{'team':'Los Angeles Lakers','position':'PG'},
+  'Gabe Vincent':{'team':'Los Angeles Lakers','position':'PG'},
+  'Rui Hachimura':{'team':'Los Angeles Lakers','position':'PF'},
+  'Taurean Prince':{'team':'Los Angeles Lakers','position':'SF'},
+  'Cam Anthony':{'team':'Los Angeles Lakers','position':'SF'},
+  'Bronny James':{'team':'Los Angeles Lakers','position':'PG'},
+  // Memphis Grizzlies
+  'Ja Morant':{'team':'Memphis Grizzlies','position':'PG'},
+  'Jaren Jackson Jr':{'team':'Memphis Grizzlies','position':'C'},
+  'Desmond Bane':{'team':'Memphis Grizzlies','position':'SG'},
+  'Marcus Smart':{'team':'Memphis Grizzlies','position':'PG'},
+  'Zach Edey':{'team':'Memphis Grizzlies','position':'C'},
+  'GG Jackson':{'team':'Memphis Grizzlies','position':'PF'},
+  'Santi Aldama':{'team':'Memphis Grizzlies','position':'PF'},
+  'Jaylen Wells':{'team':'Memphis Grizzlies','position':'SF'},
+  'Luke Kennard':{'team':'Memphis Grizzlies','position':'SG'},
+  // Miami Heat
+  'Bam Adebayo':{'team':'Miami Heat','position':'C'},
+  'Tyler Herro':{'team':'Miami Heat','position':'SG'},
+  'Jimmy Butler':{'team':'Miami Heat','position':'SF'},
+  'Terry Rozier':{'team':'Miami Heat','position':'PG'},
+  'Nikola Jovic':{'team':'Miami Heat','position':'PF'},
+  'Jaime Jaquez Jr':{'team':'Miami Heat','position':'SF'},
+  'Kevin Love':{'team':'Miami Heat','position':'C'},
+  'Duncan Robinson':{'team':'Miami Heat','position':'SG'},
+  // Milwaukee Bucks
+  'Giannis Antetokounmpo':{'team':'Milwaukee Bucks','position':'PF'},
+  'Damian Lillard':{'team':'Milwaukee Bucks','position':'PG'},
+  'Khris Middleton':{'team':'Milwaukee Bucks','position':'SF'},
+  'Brook Lopez':{'team':'Milwaukee Bucks','position':'C'},
+  'Bobby Portis':{'team':'Milwaukee Bucks','position':'PF'},
+  'Patrick Beverley':{'team':'Milwaukee Bucks','position':'PG'},
+  'MarJon Beauchamp':{'team':'Milwaukee Bucks','position':'SF'},
+  'AJ Green':{'team':'Milwaukee Bucks','position':'SG'},
+  'Malik Beasley':{'team':'Milwaukee Bucks','position':'SG'},
+  'Gary Trent Jr':{'team':'Milwaukee Bucks','position':'SG'},
+  // Minnesota Timberwolves
+  'Karl-Anthony Towns':{'team':'Minnesota Timberwolves','position':'C'},
+  'Anthony Edwards':{'team':'Minnesota Timberwolves','position':'SG'},
+  'Rudy Gobert':{'team':'Minnesota Timberwolves','position':'C'},
+  'Mike Conley':{'team':'Minnesota Timberwolves','position':'PG'},
+  'Jaden McDaniels':{'team':'Minnesota Timberwolves','position':'SF'},
+  'Naz Reid':{'team':'Minnesota Timberwolves','position':'C'},
+  'Julius Randle':{'team':'Minnesota Timberwolves','position':'PF'},
+  // New Orleans Pelicans
+  'Zion Williamson':{'team':'New Orleans Pelicans','position':'PF'},
+  'Brandon Ingram':{'team':'New Orleans Pelicans','position':'SF'},
+  'CJ McCollum':{'team':'New Orleans Pelicans','position':'SG'},
+  'Trey Murphy III':{'team':'New Orleans Pelicans','position':'SF'},
+  'Herbert Jones':{'team':'New Orleans Pelicans','position':'SF'},
+  'Jose Alvarado':{'team':'New Orleans Pelicans','position':'PG'},
+  'Larry Nance Jr':{'team':'New Orleans Pelicans','position':'PF'},
+  'Jordan Hawkins':{'team':'New Orleans Pelicans','position':'SG'},
+  'Daniel Theis':{'team':'New Orleans Pelicans','position':'C'},
+  // New York Knicks
+  'Jalen Brunson':{'team':'New York Knicks','position':'PG'},
+  'Mikal Bridges':{'team':'New York Knicks','position':'SF'},
+  'OG Anunoby':{'team':'New York Knicks','position':'SF'},
+  'Josh Hart':{'team':'New York Knicks','position':'SG'},
+  'Mitchell Robinson':{'team':'New York Knicks','position':'C'},
+  'Donte DiVincenzo':{'team':'New York Knicks','position':'SG'},
+  'Isaiah Hartenstein':{'team':'New York Knicks','position':'C'},
+  'Precious Achiuwa':{'team':'New York Knicks','position':'PF'},
+  // Oklahoma City Thunder
+  'Shai Gilgeous-Alexander':{'team':'Oklahoma City Thunder','position':'PG'},
+  'Jalen Williams':{'team':'Oklahoma City Thunder','position':'SG'},
+  'Luguentz Dort':{'team':'Oklahoma City Thunder','position':'SG'},
+  'Chet Holmgren':{'team':'Oklahoma City Thunder','position':'C'},
+  'Aaron Wiggins':{'team':'Oklahoma City Thunder','position':'SG'},
+  'Isaiah Joe':{'team':'Oklahoma City Thunder','position':'SG'},
+  'Kenrich Williams':{'team':'Oklahoma City Thunder','position':'SF'},
+  'Ousmane Dieng':{'team':'Oklahoma City Thunder','position':'SF'},
+  'Alex Caruso':{'team':'Oklahoma City Thunder','position':'SG'},
+  // Orlando Magic
+  'Paolo Banchero':{'team':'Orlando Magic','position':'PF'},
+  'Franz Wagner':{'team':'Orlando Magic','position':'SF'},
+  'Wendell Carter Jr':{'team':'Orlando Magic','position':'C'},
+  'Cole Anthony':{'team':'Orlando Magic','position':'PG'},
+  'Markelle Fultz':{'team':'Orlando Magic','position':'PG'},
+  'Jalen Suggs':{'team':'Orlando Magic','position':'PG'},
+  'Gary Harris':{'team':'Orlando Magic','position':'SG'},
+  'Jonathan Isaac':{'team':'Orlando Magic','position':'PF'},
+  'Moritz Wagner':{'team':'Orlando Magic','position':'C'},
+  'Anthony Black':{'team':'Orlando Magic','position':'PG'},
+  // Philadelphia 76ers
+  'Joel Embiid':{'team':'Philadelphia 76ers','position':'C'},
+  'Tyrese Maxey':{'team':'Philadelphia 76ers','position':'PG'},
+  'Paul George':{'team':'Philadelphia 76ers','position':'SF'},
+  'Kelly Oubre Jr':{'team':'Philadelphia 76ers','position':'SF'},
+  'Andre Drummond':{'team':'Philadelphia 76ers','position':'C'},
+  'Nicolas Batum':{'team':'Philadelphia 76ers','position':'PF'},
+  'KJ Martin':{'team':'Philadelphia 76ers','position':'PF'},
+  'Kyle Lowry':{'team':'Philadelphia 76ers','position':'PG'},
+  'Caleb Martin':{'team':'Philadelphia 76ers','position':'SF'},
+  // Phoenix Suns
+  'Kevin Durant':{'team':'Phoenix Suns','position':'SF'},
+  'Devin Booker':{'team':'Phoenix Suns','position':'SG'},
+  'Bradley Beal':{'team':'Phoenix Suns','position':'SG'},
+  'Jusuf Nurkic':{'team':'Phoenix Suns','position':'C'},
+  'Grayson Allen':{'team':'Phoenix Suns','position':'SG'},
+  'Royce O\'Neale':{'team':'Phoenix Suns','position':'SF'},
+  'Eric Gordon':{'team':'Phoenix Suns','position':'SG'},
+  'Drew Eubanks':{'team':'Phoenix Suns','position':'C'},
+  'Bol Bol':{'team':'Phoenix Suns','position':'C'},
+  // Portland Trail Blazers
+  'Scoot Henderson':{'team':'Portland Trail Blazers','position':'PG'},
+  'Anfernee Simons':{'team':'Portland Trail Blazers','position':'SG'},
+  'Deandre Ayton':{'team':'Portland Trail Blazers','position':'C'},
+  'Jerami Grant':{'team':'Portland Trail Blazers','position':'PF'},
+  'Matisse Thybulle':{'team':'Portland Trail Blazers','position':'SG'},
+  'Shaedon Sharpe':{'team':'Portland Trail Blazers','position':'SG'},
+  'Toumani Camara':{'team':'Portland Trail Blazers','position':'SF'},
+  'Donovan Clingan':{'team':'Portland Trail Blazers','position':'C'},
+  // Sacramento Kings
+  'De\'Aaron Fox':{'team':'Sacramento Kings','position':'PG'},
+  'Domantas Sabonis':{'team':'Sacramento Kings','position':'C'},
+  'Keegan Murray':{'team':'Sacramento Kings','position':'SF'},
+  'Harrison Barnes':{'team':'Sacramento Kings','position':'SF'},
+  'Malik Monk':{'team':'Sacramento Kings','position':'PG'},
+  'Kevin Huerter':{'team':'Sacramento Kings','position':'SG'},
+  'Trey Lyles':{'team':'Sacramento Kings','position':'PF'},
+  'Alex Len':{'team':'Sacramento Kings','position':'C'},
+  'Keon Ellis':{'team':'Sacramento Kings','position':'SG'},
+  // San Antonio Spurs
+  'Victor Wembanyama':{'team':'San Antonio Spurs','position':'C'},
+  'Devin Vassell':{'team':'San Antonio Spurs','position':'SG'},
+  'Keldon Johnson':{'team':'San Antonio Spurs','position':'SF'},
+  'Jeremy Sochan':{'team':'San Antonio Spurs','position':'PF'},
+  'Tre Jones':{'team':'San Antonio Spurs','position':'PG'},
+  'Zach Collins':{'team':'San Antonio Spurs','position':'C'},
+  'Julian Champagnie':{'team':'San Antonio Spurs','position':'SF'},
+  'Blake Wesley':{'team':'San Antonio Spurs','position':'PG'},
+  'Malaki Branham':{'team':'San Antonio Spurs','position':'SG'},
+  // Toronto Raptors
+  'Scottie Barnes':{'team':'Toronto Raptors','position':'PF'},
+  'RJ Barrett':{'team':'Toronto Raptors','position':'SG'},
+  'Immanuel Quickley':{'team':'Toronto Raptors','position':'PG'},
+  'Jakob Poeltl':{'team':'Toronto Raptors','position':'C'},
+  'Ochai Agbaji':{'team':'Toronto Raptors','position':'SG'},
+  'Bruce Brown':{'team':'Toronto Raptors','position':'PG'},
+  'Gradey Dick':{'team':'Toronto Raptors','position':'SG'},
+  'Kelly Olynyk':{'team':'Toronto Raptors','position':'C'},
+  'Garrett Temple':{'team':'Toronto Raptors','position':'SG'},
+  // Utah Jazz
+  'Lauri Markkanen':{'team':'Utah Jazz','position':'PF'},
+  'Jordan Clarkson':{'team':'Utah Jazz','position':'PG'},
+  'Collin Sexton':{'team':'Utah Jazz','position':'PG'},
+  'John Collins':{'team':'Utah Jazz','position':'PF'},
+  'Kris Dunn':{'team':'Utah Jazz','position':'PG'},
+  'Walker Kessler':{'team':'Utah Jazz','position':'C'},
+  'Taylor Hendricks':{'team':'Utah Jazz','position':'PF'},
+  'Keyonte George':{'team':'Utah Jazz','position':'PG'},
+  'Brice Sensabaugh':{'team':'Utah Jazz','position':'SG'},
+  // Washington Wizards
+  'Kyle Kuzma':{'team':'Washington Wizards','position':'PF'},
+  'Jordan Poole':{'team':'Washington Wizards','position':'SG'},
+  'Deni Avdija':{'team':'Washington Wizards','position':'SF'},
+  'Tyus Jones':{'team':'Washington Wizards','position':'PG'},
+  'Daniel Gafford':{'team':'Washington Wizards','position':'C'},
+  'Marvin Bagley III':{'team':'Washington Wizards','position':'C'},
+  'Corey Kispert':{'team':'Washington Wizards','position':'SF'},
+  'Patrick Baldwin Jr':{'team':'Washington Wizards','position':'SF'},
+  'Alexandre Sarr':{'team':'Washington Wizards','position':'C'},
+  'Bilal Coulibaly':{'team':'Washington Wizards','position':'SF'},
+};
+
+// Common aliases / alternate spellings → canonical name
+const NBA_PLAYER_ALIASES = {
+  // Nicknames — only include if unambiguous in NBA injury context
+  'luka': 'Luka Doncic',
+  'giannis': 'Giannis Antetokounmpo',
+  'ant': 'Anthony Edwards',
+  'sga': 'Shai Gilgeous-Alexander',
+  'kat': 'Karl-Anthony Towns',
+  'bam': 'Bam Adebayo',
+  'wemby': 'Victor Wembanyama',
+  'dame': 'Damian Lillard',
+  'lebron': 'LeBron James',
+  'kd': 'Kevin Durant',
+  'embiid': 'Joel Embiid',
+  'jokic': 'Nikola Jokic',
+  'tatum': 'Jayson Tatum',
+  // Full name variants / alternate spellings
+  'caris levert': 'Caris LeVert',
+  'levert': 'Caris LeVert',
+  'pj washington': 'PJ Washington',
+  'tj mcconnell': 'T.J. McConnell',
+  'karl-anthony towns': 'Karl-Anthony Towns',
+  'shai gilgeous alexander': 'Shai Gilgeous-Alexander',
+};
+
+// Normalize a status string (handles API variations, casing, whitespace)
+function normalizeStatus(raw) {
+  if (!raw) return null;
+  const s = String(raw).toLowerCase().trim();
+  if (/\bout\b/.test(s) || /ruled out/.test(s) || /will not play/.test(s) || /won.?t play/.test(s)) return 'Out';
+  if (/\bdoubtful\b/.test(s)) return 'Doubtful';
+  if (/\bquestionable\b/.test(s)) return 'Questionable';
+  if (/game.?time|gtd/.test(s)) return 'Game-Time Decision';
+  if (/\bprobable\b/.test(s)) return 'Probable';
+  // Handle exact API field values
+  const canon = {
+    'out': 'Out', 'doubtful': 'Doubtful', 'questionable': 'Questionable',
+    'game-time decision': 'Game-Time Decision', 'game time decision': 'Game-Time Decision',
+    'gtd': 'Game-Time Decision', 'probable': 'Probable', 'available': 'Probable',
+  };
+  return canon[s] || null;
+}
+
+// Extract status specifically near a player's name mention in a tweet
+function extractStatusForPlayer(text, playerName) {
+  // Look within ~80 chars after the player's last name for a status keyword
+  const lastName = playerName.split(' ').pop();
+  const idx = text.toLowerCase().indexOf(lastName.toLowerCase());
+  if (idx === -1) return null;
+  const snippet = text.slice(idx, idx + 100);
+  const { status } = extractStatus(snippet);
+  return status;
+}
+
+// Look for a player name in tweet text using the roster dictionary (case-insensitive)
+function findPlayersInTweet(text) {
+  const found = [];
+  const lowerText = text.toLowerCase();
+
+  // Merge live roster with static fallback — live roster takes priority
+  const combinedRoster = { ...NBA_PLAYER_LOOKUP, ...liveRoster };
+
+  // First check aliases for short names / nicknames (hand-curated, safe)
+  for (const [alias, canonical] of Object.entries(NBA_PLAYER_ALIASES)) {
+    if (lowerText.includes(alias)) {
+      const info = combinedRoster[canonical];
+      if (info && !found.find(f => f.name === canonical)) {
+        found.push({ name: canonical, ...info });
+      }
+    }
+  }
+
+  // Then scan full roster — full name match ONLY, no last-name guessing
+  for (const [playerName, info] of Object.entries(combinedRoster)) {
+    if (found.find(f => f.name === playerName)) continue;
+    if (lowerText.includes(playerName.toLowerCase())) {
+      found.push({ name: playerName, ...info });
+    }
+  }
+
+  return found;
+}
+
+// Legacy single-player extractor — now backed by the roster dictionary
 function extractPlayer(text) {
-  // Look for "X is out", "X is questionable", "X will not play" etc.
+  const found = findPlayersInTweet(text);
+  if (found.length) return found[0].name;
+
+  // Fallback: regex-based extraction for players not in the lookup
   const patterns = [
     /^([A-Z][a-z]+(?: [A-Z][a-z'-]+)+)\s+(?:is|will|won'?t|has|was)/,
     /([A-Z][a-z]+(?: [A-Z][a-z'-]+)+)\s+(?:is|will not|won'?t)\s+(?:play|out|questionable|doubtful|probable)/i,
@@ -1795,61 +2170,95 @@ async function fetchReporterProfiles() {
   });
 }
 
-// ─── PROCESS TWEET → REPORT ──────────────────────────────────────────────────
+// ─── PROCESS TWEET → REPORT(S) ───────────────────────────────────────────────
 function processTweet(tweet, reporter) {
   if (seenTweetIds.has(tweet.id)) return;
   if (!isInjuryTweet(tweet.text)) return;
   seenTweetIds.add(tweet.id);
 
-  const player = extractPlayer(tweet.text);
-  if (!player) return;
+  // Find ALL players mentioned in the tweet
+  const playersFound = findPlayersInTweet(tweet.text);
+  if (!playersFound.length) {
+    // Fallback: try regex
+    const name = extractPlayer(tweet.text);
+    if (!name) return;
+    playersFound.push({ name, team: reporter.team === 'All Teams' ? 'Unknown' : reporter.team, position: null });
+  }
 
-  const { status, weight } = extractStatus(tweet.text);
-  const body = extractBodyPart(tweet.text);
+  const { status: globalStatus, weight } = extractStatus(tweet.text);
+  const body   = extractBodyPart(tweet.text);
   const injury = extractInjuryLabel(tweet.text);
-  const confidence = calcConfidence(reporter, weight, tweet.text);
 
-  const newReport = {
-    id: allReports.length,
-    player,
-    team: reporter.team === 'All Teams' ? 'Unknown' : reporter.team,
-    injury, body, status, confidence,
-    reporter: reporter.name,
-    handle: reporter.handle,
-    outlet: reporter.outlet,
-    tier: reporter.tier,
-    tweet: tweet.text,
-    timestamp: new Date(tweet.createdAt),
-    leadTime: Math.floor(Math.random() * 120 + 10),
-    corroborators: [],
-    tweetId: tweet.id,
-    avatar: tweet.author?.avatar || reporter.avatar || null,
-  };
+  playersFound.forEach(playerInfo => {
+    const player     = playerInfo.name;
+    const playerTeam = playerInfo.team || (reporter.team === 'All Teams' ? 'Unknown' : reporter.team);
+    const position   = playerInfo.position || null;
 
-  // Corroboration: same player mentioned by different reporter within 1 hour
-  const existing = allReports.find(r =>
-    r.player.toLowerCase() === player.toLowerCase() &&
-    r.reporter !== reporter.name &&
-    Math.abs(r.timestamp - newReport.timestamp) < 3600000
-  );
-  if (existing) {
-    if (!existing.corroborators.includes(reporter.name)) {
-      existing.corroborators.push(reporter.name);
-      existing.confidence = Math.min(existing.confidence + 0.04, 0.99);
+    // Try to extract a status specific to this player's mention
+    const playerStatus = extractStatusForPlayer(tweet.text, player) || globalStatus;
+    const confidence   = calcConfidence(reporter, weight, tweet.text);
+
+    // ── Game fields: live schedule first, then same-team card fallback, then tweet text
+    const schedEntry   = lookupSchedule(playerTeam);
+    const teamCard     = !schedEntry ? allReports.find(r => r.team === playerTeam && r.matchup && r.matchup !== '—') : null;
+    const mentionsTonight = /\btonight\b/i.test(tweet.text);
+    const gameDate  = schedEntry?.game_date || teamCard?.game_date || (mentionsTonight ? 'Tonight' : null);
+    const gameTime  = schedEntry?.game_time || teamCard?.game_time || null;
+    const matchup   = schedEntry?.matchup   || teamCard?.matchup   || null;
+
+    // ── Prev status: find the most recent existing card for this player
+    const prevCard  = allReports.find(r => r.player.toLowerCase() === player.toLowerCase());
+    const prevStatus = prevCard?.status || null;
+    const daysSince  = prevCard
+      ? Math.round(Math.abs(Date.now() - new Date(prevCard.timestamp)) / 86400000)
+      : null;
+
+    const newReport = {
+      id: allReports.length,
+      player, position,
+      team: playerTeam,
+      injury, body,
+      status: playerStatus,
+      confidence,
+      reporter: reporter.name,
+      handle: reporter.handle,
+      outlet: reporter.outlet,
+      tier: reporter.tier,
+      tweet: tweet.text,
+      timestamp: new Date(tweet.createdAt),
+      leadTime: Math.floor(Math.random() * 120 + 10),
+      corroborators: [],
+      tweetId: tweet.id,
+      avatar: tweet.author?.avatar || reporter.avatar || null,
+      matchup, game_date: gameDate, game_time: gameTime,
+      prev_status: prevStatus,
+      days_since_last_report: daysSince,
+    };
+
+    // Corroboration check
+    const existing = allReports.find(r =>
+      r.player.toLowerCase() === player.toLowerCase() &&
+      r.reporter !== reporter.name &&
+      Math.abs(r.timestamp - newReport.timestamp) < 3600000
+    );
+    if (existing) {
+      if (!existing.corroborators.includes(reporter.name)) {
+        existing.corroborators.push(reporter.name);
+        existing.confidence = Math.min(existing.confidence + 0.04, 0.99);
+      }
+      return;
     }
-    return;
-  }
 
-  allReports.unshift(newReport);
-  // Anchor NEW badge 15-min window to the tweet's own time, not page-load time
-  const tweetMs = new Date(tweet.createdAt).getTime() || Date.now();
-  const expiryMs = tweetMs + 900000; // 15 minutes from tweet time
-  const msLeft = expiryMs - Date.now();
-  if (msLeft > 0) {
-    newIds.add(newReport.id);
-    newExpiry[newReport.id] = expiryMs;
-    setTimeout(() => { newIds.delete(newReport.id); delete newExpiry[newReport.id]; renderFeed(); }, msLeft);
-  }
+    allReports.unshift(newReport);
+    const tweetMs  = new Date(tweet.createdAt).getTime() || Date.now();
+    const expiryMs = tweetMs + 900000;
+    const msLeft   = expiryMs - Date.now();
+    if (msLeft > 0) {
+      newIds.add(newReport.id);
+      newExpiry[newReport.id] = expiryMs;
+      setTimeout(() => { newIds.delete(newReport.id); delete newExpiry[newReport.id]; renderFeed(); }, msLeft);
+    }
+  });
 }
 
 // ─── STEP 2A: Search-based approach (most efficient — 1 API call covers all reporters) ──
@@ -1932,12 +2341,68 @@ function updateStatusBar(msg) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
+// ─── LIVE ROSTER + SCHEDULE FROM SERVER ──────────────────────────────────────
+// These replace the hardcoded NBA_PLAYER_LOOKUP for team/position lookups.
+// Fetched once on load and refreshed every 6 hours.
+let liveRoster   = {};   // { "LeBron James": { team, position } }
+let liveSchedule = {};   // { "Los Angeles Lakers": { matchup, game_date, game_time } }
+
+async function fetchLiveRoster() {
+  try {
+    const res  = await fetch(`${API_URL}/proxy/roster`);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.roster && Object.keys(data.roster).length) {
+      liveRoster = data.roster;
+      console.log(`[InjuryWire] Roster loaded: ${Object.keys(liveRoster).length} players`);
+    }
+  } catch (e) { console.warn('[InjuryWire] Roster fetch failed:', e.message); }
+}
+
+async function fetchLiveSchedule() {
+  try {
+    const res  = await fetch(`${API_URL}/proxy/schedule`);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.schedule) {
+      liveSchedule = data.schedule;
+      console.log(`[InjuryWire] Schedule loaded: ${Object.keys(liveSchedule).length} team entries`);
+    }
+  } catch (e) { console.warn('[InjuryWire] Schedule fetch failed:', e.message); }
+}
+
+// Look up a player in liveRoster first, then fall back to NBA_PLAYER_LOOKUP
+function lookupPlayer(name) {
+  if (!name) return null;
+  if (liveRoster[name]) return liveRoster[name];
+  // case-insensitive fallback
+  const lower = name.toLowerCase();
+  for (const [k, v] of Object.entries(liveRoster)) {
+    if (k.toLowerCase() === lower) return v;
+  }
+  // final fallback: static lookup
+  return NBA_PLAYER_LOOKUP[name] || null;
+}
+
+// Look up game info for a team from liveSchedule first
+function lookupSchedule(team) {
+  if (!team || team === 'Unknown') return null;
+  return liveSchedule[team] || null;
+}
+
 function init() {
-  loadData();
-  setInterval(updateTimestamps, 1000);  // 1s for countdown accuracy
-  // Auto-poll when backend API is configured
-  if (API_URL && API_KEY) {
+  setInterval(updateTimestamps, 1000);
+  if (API_URL) {
+    // Fetch roster + schedule first, then load injury data
+    Promise.all([fetchLiveRoster(), fetchLiveSchedule()]).then(() => {
+      loadData();
+      // Re-fetch roster/schedule every 6 hours
+      setInterval(fetchLiveRoster,   6 * 3600000);
+      setInterval(fetchLiveSchedule, 3600000);       // schedule every hour
+    });
     setInterval(() => loadData(true), POLL_MS);
+  } else {
+    loadData();
   }
 }
 
@@ -1969,13 +2434,17 @@ function loadMockData() {
     "Pascal Siakam":          { position:'PF', matchup:'IND @ MIL', game_date:'Tonight', game_time:'8:00 PM ET', prev_status:'Available',    days_since_last_report:8 },
     "Anthony Davis":          { position:'PF', matchup:'LAL @ OKC', game_date:'Tonight', game_time:'8:00 PM ET', prev_status:'Probable',     days_since_last_report:1 },
   };
-  allReports = DEMO_REPORTS.map((r, i) => ({
-    ...r, id: i,
-    timestamp: new Date(Date.now() - r.minsAgo * 60000),
-    leadTime: Math.floor(Math.random() * 160 + 20),
-    ...(demoExtras[r.player] || { position:'—', matchup:'—', game_date:'—', game_time:'—', prev_status:null, days_since_last_report:null }),
-    tweetId: null,
-  }));
+  allReports = DEMO_REPORTS.map((r, i) => {
+    const rosterInfo = lookupPlayer(r.player);
+    return {
+      ...r, id: i,
+      timestamp: new Date(Date.now() - r.minsAgo * 60000),
+      leadTime: Math.floor(Math.random() * 160 + 20),
+      position: r.position || rosterInfo?.position || '—',
+      ...(demoExtras[r.player] || { position: rosterInfo?.position || '—', matchup:'—', game_date:'—', game_time:'—', prev_status:null, days_since_last_report:null }),
+      tweetId: null,
+    };
+  });
   setApiStatus('demo', 'DEMO');
   setTimeout(() => {
     document.getElementById('skeleton').style.display = 'none';
@@ -2016,6 +2485,8 @@ async function loadFromAPI(silent = false) {
         }
       });
       allReports = mapped;
+      // Scan each raw record for additional players mentioned in the same tweet
+      supplementMultiPlayerCards(data.injuries || []);
     }
     setApiStatus('live', 'LIVE');
     document.getElementById('last-update').textContent = 'just now';
@@ -2032,31 +2503,155 @@ async function loadFromAPI(silent = false) {
 }
 
 function mapApiReport(r, i) {
+  const tweetText = r.tweet_text || r.tweet || '';
+
+  // ── Status: re-derive from tweet text and use as ground truth ─────────────
+  // The pipeline's NLP can misclassify; the tweet is the source of truth.
+  let status = r.game_status || r.status || '';
+  const apiNormalized  = normalizeStatus(status);
+  const tweetExtracted = tweetText ? extractStatus(tweetText).status : null;
+
+  // Use tweet-extracted status unless the API gave us an unambiguous "Out"
+  // (e.g. "ruled out" language in the API field that might not be in tweet text)
+  if (tweetExtracted && apiNormalized !== 'Out') {
+    status = tweetExtracted;
+  } else {
+    status = apiNormalized || tweetExtracted || 'Questionable';
+  }
+
+  // ── Player: look up in live roster for authoritative team/position ────────
+  const rawPlayerName = r.player_name || r.player || 'Unknown';
+  const rosterEntry   = lookupPlayer(rawPlayerName);
+  const playerName    = rosterEntry
+    ? Object.keys(liveRoster).find(k => liveRoster[k] === rosterEntry) || rawPlayerName
+    : rawPlayerName;
+  const position = r.position || rosterEntry?.position || null;
+  const team     = rosterEntry?.team || r.team || 'Unknown';
+
+  // ── Game date: prefer live schedule, then API fields, then tweet context ──
+  const schedEntry = lookupSchedule(team);
+  let gameDate = schedEntry?.game_date || r.game_date || null;
+  let matchup  = schedEntry?.matchup   || r.matchup   || null;
+  let gameTime = schedEntry?.game_time || r.game_time || null;
+  if (!gameDate && tweetText && /\btonight\b/i.test(tweetText)) gameDate = 'Tonight';
+
   return {
     id: i,
     source_id: r.id || null,
-    player: r.player_name || r.player || 'Unknown',
-    position: r.position || null,
-    team: r.team || 'Unknown',
+    player: playerName,
+    position,
+    team,
     injury: r.injury_description || r.injury_type || r.injury || 'Injury',
     body: r.body_part || r.body || '',
-    status: r.game_status || r.status || 'Questionable',
+    status,
     confidence: (r.confidence_score || r.confidence || 75) / 100,
     reporter: r.reporter_name || r.reporter || '',
     handle: r.reporter_handle || r.handle || '',
     outlet: r.outlet || '',
     tier: r.reporter_tier || r.tier || 2,
-    tweet: r.tweet_text || r.tweet || '',
+    tweet: tweetText,
     timestamp: new Date(r.event_time || r.time_of_report || r.timestamp || Date.now()),
     leadTime: r.lead_time_minutes || Math.floor(Math.random() * 120 + 15),
     corroborators: r.corroborators || [],
-    matchup: r.matchup || null,
-    game_date: r.game_date || null,
+    matchup,
+    game_date: gameDate,
     game_time: r.game_time || null,
     prev_status: r.prev_status || null,
     days_since_last_report: r.days_since_last_report ?? null,
-    tweetId: r.tweet_id || r.id || null,
+    tweetId: r.tweet_id || null,  // never fall back to row id — that's a DB integer, not a tweet ID
   };
+}
+
+// ── After loading API data, scan each tweet for additional players not in primary record
+function supplementMultiPlayerCards(rawRecords) {
+  const added = [];
+  rawRecords.forEach(raw => {
+    const tweetText = raw.tweet_text || raw.tweet || '';
+    if (!tweetText) return;
+
+    const playersInTweet = findPlayersInTweet(tweetText);
+    if (playersInTweet.length <= 1) return;
+
+    // The primary player is already in allReports — only add the others
+    const primaryName = (raw.player_name || raw.player || '').toLowerCase();
+
+    playersInTweet.forEach(pInfo => {
+      if (pInfo.name.toLowerCase() === primaryName) return;
+      // Skip if we already have a card for this player from this same tweet
+      if (allReports.find(r => r.player.toLowerCase() === pInfo.name.toLowerCase() && raw.tweet_id && r.tweetId === raw.tweet_id)) return;
+      // Skip if a card for this player already exists from within the last hour
+      const recentCard = allReports.find(r =>
+        r.player.toLowerCase() === pInfo.name.toLowerCase() &&
+        Math.abs(new Date(r.timestamp) - new Date(raw.event_time || raw.timestamp || Date.now())) < 3600000
+      );
+      if (recentCard) {
+        // Just corroborate
+        if (!recentCard.corroborators.includes(raw.reporter_name || raw.reporter || '')) {
+          recentCard.corroborators.push(raw.reporter_name || raw.reporter || '');
+        }
+        return;
+      }
+
+      const playerStatus = extractStatusForPlayer(tweetText, pInfo.name) || extractStatus(tweetText).status;
+
+      // Extract injury/body scoped near this player's name in the tweet
+      // Look within ~100 chars after the player's last name for injury keywords
+      const lastName = pInfo.name.split(' ').pop();
+      const nameIdx  = tweetText.toLowerCase().indexOf(lastName.toLowerCase());
+      const snippet  = nameIdx >= 0 ? tweetText.slice(nameIdx, nameIdx + 120) : tweetText;
+      const playerBody   = extractBodyPart(snippet) || extractBodyPart(tweetText);
+      const playerInjury = extractInjuryLabel(snippet) || extractInjuryLabel(tweetText);
+
+      // Look up correct team/position from live roster
+      const rosterInfo = lookupPlayer(pInfo.name);
+
+      // Game date correction
+      let gameDate = raw.game_date || null;
+      if (tweetText && /\btonight\b/i.test(tweetText)) {
+        if (!gameDate) gameDate = 'Tonight';
+        else {
+          const parsedGame = new Date(gameDate + (gameDate.includes('/') ? `/${new Date().getFullYear()}` : ''));
+          if (!isNaN(parsedGame)) {
+            const daysDiff = Math.round((parsedGame.setHours(0,0,0,0) - new Date().setHours(0,0,0,0)) / 86400000);
+            if (daysDiff > 0) gameDate = 'Tonight';
+          }
+        }
+      }
+
+      const newCard = {
+        id: allReports.length + added.length + 5000,
+        source_id: null,
+        player: pInfo.name,
+        position: rosterInfo?.position || pInfo.position || null,
+        team: rosterInfo?.team || pInfo.team || 'Unknown',
+        injury: playerInjury,
+        body: playerBody,
+        status: playerStatus,
+        confidence: Math.max(((raw.confidence_score || raw.confidence || 70) / 100) - 0.05, 0.5),
+        reporter: raw.reporter_name || raw.reporter || '',
+        handle: raw.reporter_handle || raw.handle || '',
+        outlet: raw.outlet || '',
+        tier: raw.reporter_tier || raw.tier || 2,
+        tweet: tweetText,
+        timestamp: new Date(raw.event_time || raw.time_of_report || raw.timestamp || Date.now()),
+        leadTime: Math.floor(Math.random() * 120 + 15),
+        corroborators: [],
+        matchup: raw.matchup || null,
+        game_date: gameDate,
+        game_time: raw.game_time || null,
+        prev_status: null,
+        days_since_last_report: null,
+        tweetId: raw.tweet_id || null,
+      };
+      added.push(newCard);
+    });
+  });
+
+  if (added.length) {
+    allReports.unshift(...added);
+    allReports.sort((a, b) => b.timestamp - a.timestamp);
+    console.log(`[InjuryWire] Supplemented ${added.length} additional player card(s) from multi-player tweets`);
+  }
 }
 
 function setApiStatus(state, text) {
@@ -2304,8 +2899,9 @@ function buildSummaryLine(r) {
   const pos      = r.position || '—';
   const team     = shortTeamName(r.team);
   const status   = r.status || '—';
-  const injury   = r.injury && r.injury !== 'Injury' ? r.injury : 'an undisclosed injury';
-  const article  = /^[aeiou]/i.test(injury) ? 'an' : 'a';
+  const injuryRaw = r.injury && r.injury !== 'Injury' ? r.injury : null;
+  const injury   = injuryRaw || 'undisclosed injury';
+  const article  = injuryRaw ? (/^[aeiou]/i.test(injuryRaw) ? 'an' : 'a') : 'an';
   const matchup  = r.matchup || '—';
   const day      = r.game_date || '—';
   const time     = r.game_time || '—';
