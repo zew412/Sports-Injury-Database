@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>InjuryWire — NBA Injury Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -1227,6 +1230,15 @@ header {
 }
 .reset-filters-link:hover { opacity: 1; }
 
+/* ── NAV BUTTON (between pages) ── */
+.header-nav-btn {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+  color: var(--muted); text-decoration: none;
+  border: 1px solid var(--border2); padding: 4px 12px; border-radius: 3px;
+  transition: color 0.12s, border-color 0.12s;
+}
+.header-nav-btn:hover { color: var(--accent); border-color: rgba(0,200,255,0.3); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1100px) {
   .layout { grid-template-columns: 200px 1fr 240px; }
@@ -1270,6 +1282,7 @@ header {
     </div>
   </div>
   <div class="header-right">
+    <a href="history.html?v=2" class="header-nav-btn">HISTORICAL</a>
     <div class="live-badge">
       <div class="live-dot"></div>
       <span id="monitor-count">213</span> MONITORED
@@ -2497,6 +2510,11 @@ document.addEventListener('click', e => {
     sheet.classList.remove('open');
     activeSheet = null;
   }
+});
+
+// Force fresh load if browser restores this page from back/forward cache
+window.addEventListener('pageshow', function(e) {
+  if (e.persisted) window.location.reload();
 });
 
 init();
