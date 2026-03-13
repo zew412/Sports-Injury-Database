@@ -90,14 +90,16 @@ header {
   display: flex; align-items: center; gap: 16px; margin-left: auto; flex-shrink: 0;
 }
 
-/* ── NAV BUTTON — CSS class only, no inline handlers ── */
+/* ── PAGE NAV TABS — identical to index ── */
+.page-nav { display: flex; gap: 3px; margin-left: 8px; }
 .header-nav-btn {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
   color: var(--muted); text-decoration: none;
-  border: 1px solid var(--border2); padding: 4px 12px; border-radius: 3px;
-  transition: color 0.12s, border-color 0.12s;
+  border: 1px solid var(--border2); padding: 5px 14px; border-radius: 3px;
+  transition: color 0.12s, border-color 0.12s, background 0.12s; white-space: nowrap;
 }
-.header-nav-btn:hover { color: var(--accent); border-color: rgba(0,200,255,0.3); }
+.header-nav-btn:hover { color: var(--text2); border-color: var(--border2); background: var(--surface2); }
+.header-nav-btn.active { color: var(--accent); border-color: rgba(0,200,255,0.3); background: var(--accent-dim); }
 
 /* DB status pill — mirrors live-badge style */
 .db-status {
@@ -368,15 +370,18 @@ td { padding: 11px 14px; font-size: 13px; vertical-align: middle; white-space: n
 
 <div class="rep-hover-card" id="rep-hover-card" style="display:none"></div>
 
-<!-- HEADER — identical markup to index.html -->
+<!-- HEADER — identical layout to index.html -->
 <header>
   <div class="logo">
     <div class="logo-mark">IW</div>
     <span class="logo-text">INJURYWIRE</span>
     <span class="logo-badge">NBA · BETA</span>
   </div>
+  <nav class="page-nav">
+    <a class="header-nav-btn" href="index.html?v=2">LIVE FEED</a>
+    <a class="header-nav-btn active" href="history.html?v=2">PLAYERS DATABASE</a>
+  </nav>
   <div class="header-right">
-    <a href="index.html?v=2" class="header-nav-btn">← LIVE FEED</a>
     <div class="db-status" id="db-status">
       <div class="db-dot" id="db-dot"></div>
       <span id="db-status-text">CONNECTING</span>
