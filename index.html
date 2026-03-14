@@ -1671,8 +1671,8 @@ function extractInjuryLabel(text) {
 // Maps canonical name → { team, position }
 const NBA_PLAYER_LOOKUP = {
   // Atlanta Hawks
-  'Trae Young':{'team':'Washington Wizards','position':'PG'},
-  'Dejounte Murray':{'team':'New Orleans Pelicans','position':'PG'},
+  'Trae Young':{'team':'Atlanta Hawks','position':'PG'},
+  'Dejounte Murray':{'team':'Atlanta Hawks','position':'PG'},
   'Jalen Johnson':{'team':'Atlanta Hawks','position':'SF'},
   'Clint Capela':{'team':'Atlanta Hawks','position':'C'},
   'De\'Andre Hunter':{'team':'Atlanta Hawks','position':'SF'},
@@ -1704,7 +1704,7 @@ const NBA_PLAYER_LOOKUP = {
   // Chicago Bulls
   'Zach LaVine':{'team':'Chicago Bulls','position':'SG'},
   'Nikola Vucevic':{'team':'Chicago Bulls','position':'C'},
-  'DeMar DeRozan':{'team':'Sacramento Kings','position':'SG'},
+  'DeMar DeRozan':{'team':'Chicago Bulls','position':'SF'},
   'Coby White':{'team':'Chicago Bulls','position':'PG'},
   'Ayo Dosunmu':{'team':'Chicago Bulls','position':'SG'},
   'Patrick Williams':{'team':'Chicago Bulls','position':'PF'},
@@ -1718,7 +1718,7 @@ const NBA_PLAYER_LOOKUP = {
   'Max Strus':{'team':'Cleveland Cavaliers','position':'SG'},
   'Dean Wade':{'team':'Cleveland Cavaliers','position':'PF'},
   // Dallas Mavericks
-  'Luka Doncic':{'team':'Los Angeles Lakers','position':'PG'},
+  'Luka Doncic':{'team':'Dallas Mavericks','position':'PG'},
   'Kyrie Irving':{'team':'Dallas Mavericks','position':'PG'},
   'PJ Washington':{'team':'Dallas Mavericks','position':'PF'},
   'Derrick Jones Jr':{'team':'Dallas Mavericks','position':'SF'},
@@ -1751,7 +1751,7 @@ const NBA_PLAYER_LOOKUP = {
   'Stephen Curry':{'team':'Golden State Warriors','position':'PG'},
   'Draymond Green':{'team':'Golden State Warriors','position':'PF'},
   'Jonathan Kuminga':{'team':'Golden State Warriors','position':'PF'},
-  'Andrew Wiggins':{'team':'Golden State Warriors','position':'SF'},
+  'Andrew Wiggins':{'team':'Miami Heat','position':'SF'},
   'Brandin Podziemski':{'team':'Golden State Warriors','position':'SG'},
   'Trayce Jackson-Davis':{'team':'Golden State Warriors','position':'C'},
   'Moses Moody':{'team':'Golden State Warriors','position':'SG'},
@@ -1780,15 +1780,15 @@ const NBA_PLAYER_LOOKUP = {
   'Ben Sheppard':{'team':'Indiana Pacers','position':'SF'},
   // LA Clippers
   'Kawhi Leonard':{'team':'LA Clippers','position':'SF'},
-  'James Harden':{'team':'Cleveland Cavaliers','position':'PG'},
+  'James Harden':{'team':'LA Clippers','position':'PG'},
   'Ivica Zubac':{'team':'LA Clippers','position':'C'},
-  'Norman Powell':{'team':'LA Clippers','position':'SG'},
+  'Norman Powell':{'team':'Miami Heat','position':'SG'},
   'Russell Westbrook':{'team':'LA Clippers','position':'PG'},
-  'Kevin Porter Jr':{'team':'LA Clippers','position':'SG'},
+  'Kevin Porter Jr':{'team':'Milwaukee Bucks','position':'PG'},
   'Bones Hyland':{'team':'LA Clippers','position':'PG'},
   // Los Angeles Lakers
   'LeBron James':{'team':'Los Angeles Lakers','position':'SF'},
-  'Anthony Davis':{'team':'Washington Wizards','position':'C'},
+  'Anthony Davis':{'team':'Los Angeles Lakers','position':'C'},
   'Austin Reaves':{'team':'Los Angeles Lakers','position':'SG'},
   'D\'Angelo Russell':{'team':'Los Angeles Lakers','position':'PG'},
   'Gabe Vincent':{'team':'Los Angeles Lakers','position':'PG'},
@@ -1798,9 +1798,9 @@ const NBA_PLAYER_LOOKUP = {
   'Bronny James':{'team':'Los Angeles Lakers','position':'PG'},
   // Memphis Grizzlies
   'Ja Morant':{'team':'Memphis Grizzlies','position':'PG'},
-  'Jaren Jackson Jr':{'team':'Utah Jazz','position':'PF'},
+  'Jaren Jackson Jr':{'team':'Memphis Grizzlies','position':'C'},
   'Desmond Bane':{'team':'Memphis Grizzlies','position':'SG'},
-  'Marcus Smart':{'team':'Los Angeles Lakers','position':'PG'},
+  'Marcus Smart':{'team':'Memphis Grizzlies','position':'PG'},
   'Zach Edey':{'team':'Memphis Grizzlies','position':'C'},
   'GG Jackson':{'team':'Memphis Grizzlies','position':'PF'},
   'Santi Aldama':{'team':'Memphis Grizzlies','position':'PF'},
@@ -1809,7 +1809,7 @@ const NBA_PLAYER_LOOKUP = {
   // Miami Heat
   'Bam Adebayo':{'team':'Miami Heat','position':'C'},
   'Tyler Herro':{'team':'Miami Heat','position':'SG'},
-  'Jimmy Butler':{'team':'Miami Heat','position':'SF'},
+  'Jimmy Butler':{'team':'Golden State Warriors','position':'SF'},
   'Terry Rozier':{'team':'Miami Heat','position':'PG'},
   'Nikola Jovic':{'team':'Miami Heat','position':'PF'},
   'Jaime Jaquez Jr':{'team':'Miami Heat','position':'SF'},
@@ -1827,7 +1827,7 @@ const NBA_PLAYER_LOOKUP = {
   'Malik Beasley':{'team':'Milwaukee Bucks','position':'SG'},
   'Gary Trent Jr':{'team':'Milwaukee Bucks','position':'SG'},
   // Minnesota Timberwolves
-  'Karl-Anthony Towns':{'team':'New York Knicks','position':'C'},
+  'Karl-Anthony Towns':{'team':'Minnesota Timberwolves','position':'C'},
   'Anthony Edwards':{'team':'Minnesota Timberwolves','position':'SG'},
   'Rudy Gobert':{'team':'Minnesota Timberwolves','position':'C'},
   'Mike Conley':{'team':'Minnesota Timberwolves','position':'PG'},
@@ -1851,7 +1851,7 @@ const NBA_PLAYER_LOOKUP = {
   'Josh Hart':{'team':'New York Knicks','position':'SG'},
   'Mitchell Robinson':{'team':'New York Knicks','position':'C'},
   'Donte DiVincenzo':{'team':'New York Knicks','position':'SG'},
-  'Isaiah Hartenstein':{'team':'Oklahoma City Thunder','position':'C'},
+  'Isaiah Hartenstein':{'team':'New York Knicks','position':'C'},
   'Precious Achiuwa':{'team':'New York Knicks','position':'PF'},
   // Oklahoma City Thunder
   'Shai Gilgeous-Alexander':{'team':'Oklahoma City Thunder','position':'PG'},
@@ -1861,7 +1861,7 @@ const NBA_PLAYER_LOOKUP = {
   'Aaron Wiggins':{'team':'Oklahoma City Thunder','position':'SG'},
   'Isaiah Joe':{'team':'Oklahoma City Thunder','position':'SG'},
   'Kenrich Williams':{'team':'Oklahoma City Thunder','position':'SF'},
-  'Ousmane Dieng':{'team':'Oklahoma City Thunder','position':'SF'},
+  'Ousmane Dieng':{'team':'Milwaukee Bucks','position':'SF'},
   'Alex Caruso':{'team':'Oklahoma City Thunder','position':'SG'},
   // Orlando Magic
   'Paolo Banchero':{'team':'Orlando Magic','position':'PF'},
@@ -1885,7 +1885,7 @@ const NBA_PLAYER_LOOKUP = {
   'Kyle Lowry':{'team':'Philadelphia 76ers','position':'PG'},
   'Caleb Martin':{'team':'Philadelphia 76ers','position':'SF'},
   // Phoenix Suns
-  'Kevin Durant':{'team':'Houston Rockets','position':'SF'},
+  'Kevin Durant':{'team':'Phoenix Suns','position':'SF'},
   'Devin Booker':{'team':'Phoenix Suns','position':'SG'},
   'Bradley Beal':{'team':'Phoenix Suns','position':'SG'},
   'Jusuf Nurkic':{'team':'Phoenix Suns','position':'C'},
@@ -2894,6 +2894,27 @@ function clearReporterView() {
 
 // ─── STRUCTURED CARD HELPERS ─────────────────────────────────────────────────
 
+function fmtGameDate(raw) {
+  if (!raw || raw === '—') return '—';
+  if (!/^\d{4}-\d{2}-\d{2}/.test(raw)) return raw; // already human-readable
+  const d = new Date(raw + 'T12:00:00');
+  const today = new Date();
+  const tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
+  if (d.toDateString() === today.toDateString()) return 'Tonight';
+  if (d.toDateString() === tomorrow.toDateString()) return 'Tomorrow';
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+function fmtGameTime(raw) {
+  if (!raw || raw === '—') return '—';
+  if (!/T\d{2}:\d{2}/.test(raw)) return raw; // already formatted e.g. "7:30 PM ET"
+  const d = new Date(raw);
+  if (isNaN(d)) return raw;
+  return d.toLocaleTimeString('en-US', {
+    hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York'
+  }) + ' ET';
+}
+
 function buildSummaryLine(r) {
   const player   = r.player || '—';
   const pos      = r.position || '—';
@@ -2903,8 +2924,8 @@ function buildSummaryLine(r) {
   const injury   = injuryRaw || 'undisclosed injury';
   const article  = injuryRaw ? (/^[aeiou]/i.test(injuryRaw) ? 'an' : 'a') : 'an';
   const matchup  = r.matchup || '—';
-  const day      = r.game_date || '—';
-  const time     = r.game_time || '—';
+  const day      = fmtGameDate(r.game_date);
+  const time     = fmtGameTime(r.game_time);
   const reporter = r.reporter || '—';
 
   // Corroborator suffix
@@ -3068,14 +3089,10 @@ function confClass(c) {
 }
 
 function timeAgo(ts) {
-  const date = ts instanceof Date ? ts : new Date(ts);
-  if (isNaN(date)) return '—';
-  const d = Math.floor((Date.now() - date) / 60000);
-  const rel = d < 1 ? 'just now' : d < 60 ? `${d}m ago` : `${Math.floor(d/60)}h ${d%60}m ago`;
-  const etStr = date.toLocaleTimeString('en-US', {
-    hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'America/New_York'
-  }) + ' ET';
-  return `${rel} · ${etStr}`;
+  const d = Math.floor((Date.now() - ts) / 60000);
+  if (d < 1) return 'just now';
+  if (d < 60) return `${d}m ago`;
+  return `${Math.floor(d/60)}h ${d%60}m ago`;
 }
 
 function renderFeed() {
