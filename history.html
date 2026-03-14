@@ -248,7 +248,14 @@ tbody tr.row-expanded { background: var(--accent-dim); border-left: 2px solid va
 td { padding: 11px 14px; font-size: 13px; vertical-align: middle; white-space: nowrap; }
 
 .td-player { font-family: var(--font-display); font-weight: 700; font-size: 15px; }
-.td-pos { font-family: var(--font-mono); font-size: 9px; color: var(--muted); display: block; margin-top: 1px; }
+.td-pos {
+  display: inline-block;
+  font-family: var(--font-mono); font-size: 8px; font-weight: 600;
+  color: var(--accent); letter-spacing: 0.5px;
+  border: 1px solid rgba(0,200,255,0.2); border-radius: 2px;
+  padding: 0 4px; margin-left: 6px;
+  vertical-align: middle; background: rgba(0,200,255,0.04);
+}
 .td-team { font-family: var(--font-mono); font-size: 10px; color: var(--text2); }
 .td-time { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
 .td-conf { font-family: var(--font-display); font-weight: 700; font-size: 18px; }
@@ -272,11 +279,16 @@ td { padding: 11px 14px; font-size: 13px; vertical-align: middle; white-space: n
 
 /* Expanded tweet row */
 .tweet-expand-row td {
-  background: var(--surface2); padding: 14px 20px 16px;
+  background: var(--surface2); padding: 12px 20px 14px;
   font-family: var(--font-mono); font-size: 11px; color: var(--text2);
   line-height: 1.7; white-space: normal; border-bottom: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
 }
-.tweet-expand-meta { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.tweet-expand-quote {
+  font-style: italic; color: var(--text2); margin-bottom: 10px;
+  padding-left: 10px; border-left: 2px solid var(--border2);
+}
+.tweet-expand-meta { display: flex; gap: 14px; flex-wrap: wrap; }
 .tem-item { font-size: 9px; color: var(--muted); letter-spacing: 0.5px; }
 .tem-item span { color: var(--text2); }
 
@@ -597,6 +609,18 @@ async function runQuery() {
   }
 }
 
+function normalizePosition(pos) {
+  if (!pos) return '';
+  const p = pos.toUpperCase().trim();
+  if (['PG','SG','SF','PF','C'].includes(p)) return p;
+  if (p === 'G') return 'SG';
+  if (p === 'F') return 'SF';
+  if (p === 'G-F' || p === 'F-G') return 'SF';
+  if (p === 'F-C') return 'PF';
+  if (p === 'C-F') return 'C';
+  return pos;
+}
+
 function normalise(r) {
   const conf = typeof r.confidence === 'number'
     ? (r.confidence > 1 ? r.confidence : Math.round(r.confidence * 100))
@@ -606,7 +630,7 @@ function normalise(r) {
     time_of_report: r.time_of_report || r.timestamp || r.created_at,
     body_part: r.body_part || r.body || '',
     injury_type: r.injury_type || '',
-    position: r.position || '',
+    position: normalizePosition(r.position || ''),
     prev_status: r.prev_status || null,
     days_since_last_report: r.days_since_last_report ?? null,
     confidence: conf,
@@ -680,13 +704,13 @@ function renderTable() {
       <td style="font-family:var(--font-mono);font-size:10px;color:${daysColor(r.days_since_last_report)}">${daysVal}</td>
     </tr>
     ${isExp ? `<tr class="tweet-expand-row"><td colspan="8">
-      <div>"${r.tweet_text || r.tweet || 'No tweet text available.'}"</div>
+      <div class="tweet-expand-quote">"${r.tweet_text || r.tweet || 'No tweet text available.'}"</div>
       <div class="tweet-expand-meta">
         <div class="tem-item">OUTLET <span>${r.outlet||'—'}</span></div>
         <div class="tem-item">TIER <span>${r.tier||'—'}</span></div>
         ${r.matchup ? `<div class="tem-item">MATCHUP <span>${r.matchup}</span></div>` : ''}
         ${r.game_time ? `<div class="tem-item">TIP-OFF <span>${r.game_time}</span></div>` : ''}
-        ${(r.corroborators||[]).length ? `<div class="tem-item">CONFIRMED BY <span>${r.corroborators.join(', ')}</span></div>` : ''}
+        ${(r.corroborators||[]).length ? `<div class="tem-item">ALSO CONFIRMED <span>${r.corroborators.map(c => typeof c === 'object' ? c.name : c).join(', ')}</span></div>` : ''}
       </div>
     </td></tr>` : ''}`;
   }).join('');
@@ -887,11 +911,17 @@ function fmtTime(ts) {
 }
 function shortTeam(t) {
   if (!t) return '—';
-  return t.replace('Los Angeles','LA').replace('Golden State','GS').replace('Minnesota','MIN')
-    .replace('Oklahoma City','OKC').replace('Portland Trail Blazers','Portland')
-    .replace('Washington','WSH').replace('New Orleans','NO').replace('San Antonio','SA')
-    .replace('Philadelphia','PHI').replace('Charlotte','CHA').replace('Milwaukee','MIL')
-    .replace('Cleveland','CLE').replace('Sacramento','SAC');
+  const m = {'Atlanta Hawks':'ATL','Boston Celtics':'BOS','Brooklyn Nets':'BKN',
+    'Charlotte Hornets':'CHA','Chicago Bulls':'CHI','Cleveland Cavaliers':'CLE',
+    'Dallas Mavericks':'DAL','Denver Nuggets':'DEN','Detroit Pistons':'DET',
+    'Golden State Warriors':'GSW','Houston Rockets':'HOU','Indiana Pacers':'IND',
+    'LA Clippers':'LAC','Los Angeles Lakers':'LAL','Memphis Grizzlies':'MEM',
+    'Miami Heat':'MIA','Milwaukee Bucks':'MIL','Minnesota Timberwolves':'MIN',
+    'New Orleans Pelicans':'NOP','New York Knicks':'NYK','Oklahoma City Thunder':'OKC',
+    'Orlando Magic':'ORL','Philadelphia 76ers':'PHI','Phoenix Suns':'PHX',
+    'Portland Trail Blazers':'POR','Sacramento Kings':'SAC','San Antonio Spurs':'SAS',
+    'Toronto Raptors':'TOR','Utah Jazz':'UTA','Washington Wizards':'WSH'};
+  return m[t] || t.split(' ').pop();
 }
 function setLoading() {
   const skels = [1,2,3].map(()=>
