@@ -409,20 +409,19 @@ header {
   font-family: var(--font-body);
   font-size: 12px;
   text-align: left;
-  transition: all 0.12s;
+  transition: background 0.12s, color 0.12s;
   border-left: 2px solid transparent;
 }
-.team-btn:hover { background: var(--surface2); color: var(--text2); }
-.team-btn.active { background: var(--accent-dim); color: var(--text); border-left-color: var(--accent); }
+.team-btn:hover { background: rgba(255,255,255,0.03); color: var(--text2); }
+.team-btn.active { background: rgba(255,255,255,0.04); color: var(--text2); border-left-color: var(--border2); }
 .team-dot {
-  width: 6px; height: 6px;
+  width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--muted);
+  background: var(--border2);
   flex-shrink: 0;
-  transition: background 0.12s;
 }
-.team-btn.active .team-dot { background: var(--accent); }
-.team-btn.has-out .team-dot { background: var(--red); }
+.team-btn.active .team-dot { background: var(--border2); }
+.team-btn.has-out .team-dot { background: var(--border2); }
 .team-count {
   margin-left: auto;
   font-family: var(--font-mono);
@@ -431,8 +430,8 @@ header {
   min-width: 16px;
   text-align: right;
 }
-.team-btn.has-out .team-count { color: var(--red); }
-.team-btn.active .team-count { color: var(--accent); }
+.team-btn.has-out .team-count { color: var(--muted); }
+.team-btn.active .team-count { color: var(--text2); }
 
 /* ── MAIN FEED ── */
 .feed-area {
@@ -494,11 +493,11 @@ header {
 
 /* ── INJURY CARD ── */
 .injury-card {
-  padding: 20px 24px;
+  padding: 10px 16px;
   border-bottom: 1px solid var(--border);
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 20px;
+  gap: 12px;
   cursor: default;
   transition: background 0.12s;
   animation: card-in 0.3s ease both;
@@ -536,7 +535,7 @@ header {
 .card-team-tag {
   font-family: var(--font-mono);
   font-size: 9px;
-  color: var(--muted);
+  color: var(--text2);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -554,11 +553,11 @@ header {
 .player-name {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
   color: var(--text);
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .injury-meta {
@@ -1234,36 +1233,19 @@ header {
   border: 1px solid var(--border2);
   border-left: 3px solid var(--border2);
   border-radius: 5px;
-  padding: 12px 14px;
-  margin: 10px 0 14px;
+  padding: 8px 12px;
+  margin: 8px 0 10px;
 }
-.intel-box-label {
-  font-family: var(--font-mono);
-  font-size: 8px;
-  letter-spacing: 2.5px;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-bottom: 7px;
-}
+
 .intel-box-text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text2);
-  line-height: 1.65;
+  line-height: 1.6;
   font-style: italic;
 }
 .intel-box-text strong { color: var(--text); font-style: normal; }
 
-.card-pos-tag {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--accent);
-  letter-spacing: 1px;
-  border: 1px solid rgba(0,200,255,0.2);
-  padding: 1px 5px;
-  border-radius: 2px;
-  background: rgba(0,200,255,0.04);
-}
 
 .data-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -1290,28 +1272,30 @@ header {
 .dg-value.v-green  { color: var(--green); }
 .dg-value.v-pink   { color: #ff8fa3; }
 
-/* Sources block — replaces old tweet-box */
-.sources-block { margin-bottom: 6px; }
+/* Sources block */
+.sources-block { margin-bottom: 4px; }
 
 .primary-source {
   display: flex; align-items: center; gap: 10px;
   background: var(--surface2); border: 1px solid var(--border2);
-  border-radius: var(--radius); padding: 10px 12px; margin-bottom: 6px;
+  border-radius: var(--radius); padding: 8px 12px; margin-bottom: 6px;
 }
 .ps-avatar {
-  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
   background: linear-gradient(135deg, var(--surface3), var(--border2));
   border: 1px solid var(--border2);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono); font-size: 10px; color: var(--accent);
+  font-family: var(--font-mono); font-size: 9px; color: var(--accent);
 }
 .ps-info { flex: 1; min-width: 0; }
-.ps-name { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.2; }
-.ps-meta { font-family: var(--font-mono); font-size: 9px; color: var(--muted); }
+.ps-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.2; }
+.ps-meta { font-family: var(--font-mono); font-size: 9px; color: var(--muted); margin-top: 1px; }
+.ps-tier-badge { color: var(--accent); }
 .ps-x-link {
   margin-left: auto; color: var(--text2); text-decoration: none;
-  font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 3px;
+  font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 3px;
   border: 1px solid var(--border2); flex-shrink: 0;
+  font-family: var(--font-mono); letter-spacing: 0.5px;
   transition: color 0.12s, border-color 0.12s;
 }
 .ps-x-link:hover { color: var(--accent); border-color: rgba(0,200,255,0.3); }
@@ -3319,14 +3303,12 @@ function buildCardContent(r, isNew, expiryMs) {
       <div class="card-header">
         <span class="status-pill ${statusPillClass(r.status)}">${r.status}</span>
         <span class="card-team-tag">${(r.team || '').toUpperCase()}</span>
-        <span class="card-pos-tag">${r.position || '—'}</span>
         ${isNew ? `<span class="new-badge" data-expiry="${expiryMs}">● NEW <span class="new-countdown">${countdownStr}</span></span>` : ''}
       </div>
 
       <div class="player-name">${(r.player || '—').toUpperCase()}</div>
 
       <div class="intel-box" style="border-left-color:${{Out:'var(--red)',Doubtful:'#ff8fa3',Questionable:'var(--orange)','Game-Time Decision':'var(--yellow)',Probable:'var(--green)'}[r.status]||'var(--border2)'}">
-        <div class="intel-box-label">INTEL</div>
         <div class="intel-box-text">${buildSummaryLine(r)}</div>
       </div>
 
@@ -3335,7 +3317,7 @@ function buildCardContent(r, isNew, expiryMs) {
           <div class="ps-avatar">${(r.handle || '@@').slice(1,3).toUpperCase()}</div>
           <div class="ps-info">
             <div class="ps-name">${r.reporter || '—'}</div>
-            <div class="ps-meta">${r.handle || ''} · ${r.outlet || ''} · <span style="color:var(--accent)">TIER ${r.tier || '—'}</span></div>
+            <div class="ps-meta">${r.handle || ''} · ${(r.outlet || '').split('/')[0].trim()} · <span class="ps-tier-badge">TIER ${r.tier || '—'}</span></div>
           </div>
           ${tweetXUrl
             ? `<a class="ps-x-link" href="${tweetXUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="View original tweet">𝕏 SOURCE</a>`
